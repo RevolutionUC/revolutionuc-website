@@ -13,7 +13,7 @@ Spring 2017 (and possibly future) RevolutionUC University hackathon website "fra
 > Better docs coming soon...
 
 ```sh
-git clone git@github.com:revolutionuc-revolutionuc-website.git
+git clone git@github.com:revolutionuc/revolutionuc-website.git
 cd revolutionuc-website
 npm install
 cp .env.example .env
