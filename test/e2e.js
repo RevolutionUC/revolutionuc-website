@@ -16,7 +16,7 @@ const childProcess = startServerChildProcess();
  * TODO: look into a better way to start the dev server alongside the test running.
  * `Concurrently` package might do it (installed) but not sure yet. Is spawn process
  * a bit much for what we're doing?
- */4
+ */
 const webdriver = require('selenium-webdriver');
 const test = require('selenium-webdriver/testing'),
       By       = webdriver.By,
