@@ -79,9 +79,10 @@ describe('Suite 1', function() {
   });
 
   after(function(done) {
-    killServerChildProcess(childProcess.pid);
-    done();
     driver.quit();
+    killServerChildProcess(childProcess.pid, 'SIGKILL', function() {
+      done();
+    });
   });
 
 });
