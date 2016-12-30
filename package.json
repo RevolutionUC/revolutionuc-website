@@ -7,7 +7,7 @@
     "start": "concurrently \"npm run webpack\" \"npm run serve-prod\" --kill-others",
     "dev": "concurrently \"npm run webpack\" \"npm run serve-dev\" --kill-others",
     "serve-prod": "sudo bash -ic \"node ./bin/www\"",
-    "serve-dev": "node ./bin/www",
+    "serve-dev": "export SERVE_PORT=8080 HTTPS_SERVE_PORT=8081; node ./bin/www",
     "test": "mocha test/e2e.js;",
     "webpack": "cd ./lib/client && ../../node_modules/webpack/bin/webpack.js --watch && cd ../.."
   },
