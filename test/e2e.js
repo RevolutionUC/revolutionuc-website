@@ -1,5 +1,6 @@
 'use strict';
 
+const child_process = require('child_process');
 const chai = require('chai');
 chai.use(require('chai-as-promised'));
 const expect = chai.expect;
@@ -27,6 +28,7 @@ const test = require('selenium-webdriver/testing'),
 let driver = new webdriver.Builder().forBrowser('chrome').build();
 
 describe('Suite 1', function() {
+  child_process.execSync("sleep 5");
   this.timeout(30000); // browser tests might take a bit
 
   beforeEach(function() {
