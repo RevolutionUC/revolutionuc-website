@@ -27,7 +27,6 @@ const test = require('selenium-webdriver/testing'),
 let driver = new webdriver.Builder().forBrowser('chrome').build();
 
 describe('Suite 1', function() {
-  require('child_process').execSync("sleep 5");
   this.timeout(30000); // browser tests might take a bit
 
   beforeEach(function() {
