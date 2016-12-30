@@ -8,7 +8,7 @@
     "dev": "concurrently \"npm run webpack\" \"npm run serve-dev\" --kill-others",
     "serve-prod": "sudo bash -ic \"node ./bin/www\"",
     "serve-dev": "node ./bin/www",
-    "test": "mocha test/e2e.js; rm npm-debug*",
+    "test": "mocha test/e2e.js;",
     "webpack": "cd ./lib/client && ../../node_modules/webpack/bin/webpack.js --watch && cd ../.."
   },
   "dependencies": {
