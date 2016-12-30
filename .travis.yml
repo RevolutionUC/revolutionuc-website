@@ -1,0 +1,18 @@
+language: node_js
+sudo: required
+dist: trusty
+node_js:
+ - "node"
+ - "6"
+
+before_script:
+ - sudo apt-get install libcurl3-dev # i think this is necessary for node gyp build to succeed (double check later)
+ - npm install
+ - "export DISPLAY=:99.0" # below helps for selenium webdriver e2e tests
+ - "sh -e /etc/init.d/xvfb start || echo \"Unable to start virtual display.\""
+ - sleep 3 # give xvfb some time to start
+script:
+ - npm test
+
+notifications:
+  email: false
