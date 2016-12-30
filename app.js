@@ -108,11 +108,11 @@ function approveDomains(opts, certs, cb) {
 
 lex.onRequest = app;
 
-require('http').createServer(lex.middleware(app)).listen(process.env.SERVE_PORT, function () {
+require('http').createServer(lex.middleware(app)).listen(process.env.PORT, function () {
   console.log("Listening for ACME http-01 challenges on", this.address());
 });
 
-require('https').createServer(lex.httpsOptions, lex.middleware(app)).listen(process.env.HTTPS_SERVE_PORT, function () {
+require('https').createServer(lex.httpsOptions, lex.middleware(app)).listen(process.env.HTTPS_CHALLENGE_PORT, function () {
   console.log("Listening for ACME tls-sni-01 challenges and serve app on", this.address());
 });
 

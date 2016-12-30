@@ -1,5 +1,6 @@
 'use strict';
 
+const child_process = require('child_process');
 const chai = require('chai');
 chai.use(require('chai-as-promised'));
 const expect = chai.expect;
@@ -27,6 +28,7 @@ const test = require('selenium-webdriver/testing'),
 let driver = new webdriver.Builder().forBrowser('chrome').build();
 
 describe('Suite 1', function() {
+  child_process.execSync("sleep 5");
   this.timeout(30000); // browser tests might take a bit
 
   beforeEach(function() {
@@ -77,9 +79,10 @@ describe('Suite 1', function() {
   });
 
   after(function(done) {
-    killServerChildProcess(childProcess.pid);
-    done();
     driver.quit();
+    killServerChildProcess(childProcess.pid, 'SIGKILL', function() {
+      done();
+    });
   });
 
 });
