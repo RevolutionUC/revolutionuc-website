@@ -19,6 +19,7 @@ module.exports.startServerChildProcess = function (){
   return child;
 }
 
+// http://krasimirtsonev.com/blog/article/Nodejs-managing-child-processes-starting-stopping-exec-spawn
 module.exports.killServerChildProcess = function(pid, signal, callback) {
   signal = signal || 'SIGKILL';
   callback = callback || function () {};
