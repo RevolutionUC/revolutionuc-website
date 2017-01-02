@@ -9,18 +9,24 @@ html, body {
   background: #ececec;
   overflow-x: hidden;
 
-  font-family: Roboto, sans-serif;
+  font-family: sans-serif;
 }
 
-h1 {
-  font-weight: 100;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav * {
+  font-family: 'Jockey One', sans-serif;
+  font-weight:100;
 }
 
 section.view-content {
   contain: content; /*layout style paint */
   top: 80px;
   width: 100%;
-  /*padding: 10px;*/
   position: absolute;
   pointer-events: none;
   background: transparent;
