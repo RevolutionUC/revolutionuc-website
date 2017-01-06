@@ -84,6 +84,7 @@ div.masthead {
   background-position: center;
   font-size: 32px;
   background-color: #2b2b2b;
+  transition: height 0.3s cubic-bezier(0, 0, .3, 1);
 }
 
 @media (max-width: 1000px) {
@@ -155,7 +156,6 @@ body.view-pending::after {
 .header > .header-content > .nav-container {
   float: right;
   line-height: 30px;
-  border: 1px solid red;
 }
 
 .header > .header-content > .nav-container > input[type="checkbox"] {
@@ -191,7 +191,7 @@ body.view-pending::after {
     right: 0;
     height: 100%;
     background-color: white;
-    width: 70vw;
+    width: 70%;
     z-index: -1;
   }
 
@@ -209,10 +209,11 @@ body.view-pending::after {
   }
 
   .header > .header-content > .nav-container > label {
-    display: block;
+    display: inline-block;
     background: url(/imgs/ic_menu_black_24px.svg) center center no-repeat;
     width: 24px;
     height: 24px;
+    vertical-align: middle;
   }
 
   .header > .header-content > .header-title {
