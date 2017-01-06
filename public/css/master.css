@@ -208,11 +208,11 @@ body.view-pending::after {
     color: black;
   }
 
-  /* Header and checkbox styles */
-  .header > .header-content > .nav-container > input[type="checkbox"] {
-    display: inline-block;
-    background-color: red;
-    z-index: 1000000;
+  .header > .header-content > .nav-container > label {
+    display: block;
+    background: url(/imgs/ic_menu_black_24px.svg) center center no-repeat;
+    width: 24px;
+    height: 24px;
   }
 
   .header > .header-content > .header-title {
