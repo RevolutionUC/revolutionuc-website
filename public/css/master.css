@@ -86,6 +86,12 @@ div.masthead {
   background-color: #2b2b2b;
 }
 
+@media (max-width: 1000px) {
+  div.masthead {
+    height: 300px;
+  }
+}
+
 h1.masthead-title {
   position: absolute;
   bottom: 0;
@@ -178,12 +184,35 @@ body.view-pending::after {
 }
 
 @media (max-width: 565px) {
+  /* Nav styles */
   .header > .header-content > .nav-container > nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: white;
+    width: 70vw;
+    z-index: -1;
   }
 
+  .header > .header-content > .nav-container > nav > ul {
+    margin-top: 80px;
+  }
+
+  .header > .header-content > .nav-container > nav > ul > li {
+    display: block;
+    width: 100%;
+  }
+
+  .header > .header-content > .nav-container > nav > ul > li > a {
+    color: black;
+  }
+
+  /* Header and checkbox styles */
   .header > .header-content > .nav-container > input[type="checkbox"] {
     display: inline-block;
+    background-color: red;
+    z-index: 1000000;
   }
 
   .header > .header-content > .header-title {
