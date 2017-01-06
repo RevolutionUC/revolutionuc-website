@@ -198,7 +198,9 @@ body.view-pending::after {
     transition: transform 0.3s cubic-bezier(0, 0, .3, 1);
   }
 
-  /*.header > .header-content > .nav-container::before {
+  /*
+  Consider this for a nav-open back shadow
+  .header > .header-content > .nav-container::before {
     content: '';
     position: fixed;
     top: 0;
