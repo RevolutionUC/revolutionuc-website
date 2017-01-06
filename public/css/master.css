@@ -126,10 +126,9 @@ body.view-pending::after {
   margin: 0;
   padding: 20px;
   position: fixed;
-  z-index: 9000;
+  z-index: 3;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, .6);
 
-  background: #5f5e5e;
   background: #67cbec;
 }
 
@@ -159,7 +158,8 @@ body.view-pending::after {
 }
 
 .header > .header-content > .nav-container > input[type="checkbox"] {
-  display:none;
+  position: absolute;
+  opacity: 0;
 }
 
 .header > .header-content > .nav-container > nav > ul {
@@ -175,7 +175,7 @@ body.view-pending::after {
 }
 
 .header > .header-content > .nav-container > nav > ul > li:hover {
-  background: rgba(40, 40, 40, .4);
+  background: rgba(40, 40, 40, .2);
 }
 
 .header > .header-content > .nav-container > nav > ul > li > a {
@@ -183,16 +183,35 @@ body.view-pending::after {
   color: white;
 }
 
-@media (max-width: 565px) {
+@media (max-width: 400px) {
   /* Nav styles */
   .header > .header-content > .nav-container > nav {
+    will-change: transform;
     position: fixed;
+    transform: translateX(0);
+    width: 70%;
     top: 0;
-    right: 0;
+    right: -70%;
     height: 100%;
     background-color: white;
-    width: 70%;
     z-index: -1;
+    transition: transform 0.3s cubic-bezier(0, 0, .3, 1);
+  }
+
+  /*.header > .header-content > .nav-container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: rgba(40, 40, 40, .35);
+    pointer-events: none;
+  }*/
+
+  .header > .header-content > .nav-container > input:checked ~ nav {
+    transform: translateX(-100%);
   }
 
   .header > .header-content > .nav-container > nav > ul {
@@ -208,6 +227,7 @@ body.view-pending::after {
     color: black;
   }
 
+  /* Label and title styles */
   .header > .header-content > .nav-container > label {
     display: inline-block;
     background: url(/imgs/ic_menu_black_24px.svg) center center no-repeat;
