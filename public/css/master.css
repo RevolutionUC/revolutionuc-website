@@ -170,7 +170,7 @@ body.view-pending::after {
 
 .header > .header-content > .nav-container > nav > ul > li {
   display: inline-block;
-  padding: 5px 15px;
+  padding: 6px 15px;
 }
 
 .header > .header-content > .nav-container > nav > ul > li:hover {
