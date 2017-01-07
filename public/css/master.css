@@ -84,6 +84,13 @@ div.masthead {
   background-position: center;
   font-size: 32px;
   background-color: #2b2b2b;
+  transition: height 0.3s cubic-bezier(0, 0, .3, 1);
+}
+
+@media (max-width: 1000px) {
+  div.masthead {
+    height: 300px;
+  }
 }
 
 h1.masthead-title {
@@ -119,11 +126,10 @@ body.view-pending::after {
   margin: 0;
   padding: 20px;
   position: fixed;
-  z-index: 9000;
+  z-index: 3;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, .6);
 
-  background: firebrick;
-  background: #5f5e5e;
+  background: #67cbec;
 }
 
 .header > .header-content {
@@ -146,30 +152,101 @@ body.view-pending::after {
   vertical-align: middle;
 }
 
-.header > .header-content > nav {
-  display: inline-block;
+.header > .header-content > .nav-container {
   float: right;
-  line-height: 30px;
 }
 
-.header > .header-content > nav > ul {
+.header > .header-content > .nav-container > input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.header > .header-content > .nav-container > nav > ul {
+  width: auto;
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
-.header > .header-content > nav > ul > li {
+.header > .header-content > .nav-container > nav > ul > li {
   display: inline-block;
-  float: left;
   padding: 6px 15px;
 }
 
-.header > .header-content > nav > ul > li:hover {
-  background: rgba(40, 40, 40, .4);
+.header > .header-content > .nav-container > nav > ul > li:hover {
+  background: rgba(40, 40, 40, .2);
 }
 
-.header > .header-content > nav > ul > li > a {
+.header > .header-content > .nav-container > nav > ul > li > a {
   text-decoration: none;
   color: white;
+  font-size: 20px;
+}
+
+@media (max-width: 450px) {
+  /* Nav styles */
+  .header > .header-content > .nav-container > nav {
+    will-change: transform;
+    position: fixed;
+    transform: translateX(0);
+    width: 70%;
+    top: 0;
+    right: -70%;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+    transition: transform 0.3s cubic-bezier(0, 0, .3, 1);
+  }
+
+  /*
+  Consider this for a nav-open back shadow
+  .header > .header-content > .nav-container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: rgba(40, 40, 40, .35);
+    pointer-events: none;
+  }*/
+
+  .header > .header-content > .nav-container > input:checked ~ nav {
+    transform: translateX(-100%);
+  }
+
+  .header > .header-content > .nav-container > nav > ul {
+    margin-top: 80px;
+  }
+
+  .header > .header-content > .nav-container > nav > ul > li {
+    display: block;
+    width: 100%;
+  }
+
+  .header > .header-content > .nav-container > nav > ul > li > a {
+    color: black;
+  }
+
+  /* Label and title styles */
+  .header > .header-content > .nav-container > label {
+    display: inline-block;
+    background: url(/imgs/ic_menu_black_24px.svg) center center no-repeat;
+    width: 24px;
+    height: 24px;
+    padding-top: 36px;
+  }
+
+  .header > .header-content > .header-title {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 250px) {
+  .header > .header-content > .header-title {
+    display: none;
+  }
 }
 
 @keyframes spin {
