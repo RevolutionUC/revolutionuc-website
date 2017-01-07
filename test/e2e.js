@@ -36,7 +36,7 @@ describe('Suite 1', function() {
   });
 
   it('should render the header on load', function() {
-    driver.wait(until.elementLocated(webdriver.By.css('.header')), 4000)
+    driver.wait(until.elementLocated(webdriver.By.css('header')), 4000)
       .then(element => expect(element).to.not.equal(null));
   });
 
