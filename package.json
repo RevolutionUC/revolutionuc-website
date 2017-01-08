@@ -20,7 +20,8 @@
     "express": "^4.14.0",
     "http2": "^3.3.2",
     "letsencrypt-express": "^2.0.5",
-    "morgan": "^1.7.0"
+    "morgan": "^1.7.0",
+    "revolutionuc-emails": "github:revolutionuc/revolutionuc-emails"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
