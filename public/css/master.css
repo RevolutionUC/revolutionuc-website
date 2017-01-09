@@ -95,12 +95,7 @@ div.masthead {
 
 h1.masthead-title {
   position: absolute;
-  bottom: 10px;
-}
-
-h4.masthead-subtitle {
-  position: absolute;
-  bottom: -30px;
+  bottom: 0;
 }
 
 div.masthead::before {
