@@ -95,7 +95,12 @@ div.masthead {
 
 h1.masthead-title {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
+}
+
+h4.masthead-subtitle {
+  position: absolute;
+  bottom: -30px;
 }
 
 div.masthead::before {
@@ -109,6 +114,10 @@ div.masthead::before {
   background: #2b2b2b;
   opacity: 1;
   transition: opacity 0.3s cubic-bezier(0, 0, .3, 1);
+}
+
+div[view] {
+  padding: 13px;
 }
 
 section.view-content.visible div.masthead::before {
@@ -130,6 +139,7 @@ header {
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, .6);
 
   background: #67cbec;
+  border-bottom:3px solid #5bb7d6;
 }
 
 header > .header-content {
@@ -261,10 +271,35 @@ header > .header-content > .nav-container > nav > ul > li > a {
 
 .dom-card {
   width: 100%;
-  max-width: 700px;
+  max-width: 850px;
   padding: 20px;
   margin: 10px auto;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   background-color: white;
   word-wrap: break-word;
+  border-left: 4px solid #67cbec;
+}
+
+@media (max-width: 890px) {
+  .body-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.body-image {
+  margin: 8px;
+}
+
+.body-image > img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.body-image-right {
+  float: right;
+}
+
+.body-image-left {
+  float: left;
 }
