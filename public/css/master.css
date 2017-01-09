@@ -84,6 +84,7 @@ div.masthead {
   background-position: center;
   font-size: 32px;
   background-color: #2b2b2b;
+  background-size: cover;
   transition: height 0.3s cubic-bezier(0, 0, .3, 1);
 }
 
