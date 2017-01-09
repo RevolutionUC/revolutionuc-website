@@ -166,6 +166,10 @@ header > .header-content > .nav-container > input[type="checkbox"] {
   opacity: 0;
 }
 
+header > .header-content > .nav-container > label {
+  display: none;
+}
+
 header > .header-content > .nav-container > nav > ul {
   width: auto;
   list-style: none;
@@ -234,13 +238,19 @@ header > .header-content > .nav-container > nav > ul > li > a {
     color: black;
   }
 
-  /* Label and title styles */
+  /* SVG and title styles */
   header > .header-content > .nav-container > label {
     display: inline-block;
-    background: url(/imgs/ic_menu_black_24px.svg) center center no-repeat;
     width: 24px;
     height: 24px;
-    padding-top: 36px;
+    box-sizing: content-box;
+    vertical-align: middle;
+    padding-top: 10px;
+    fill: white;
+  }
+
+  header > .header-content > .nav-container > input:checked ~ label {
+    fill: black;
   }
 
   header > .header-content > .header-title {
