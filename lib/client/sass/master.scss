@@ -1,0 +1,17 @@
+$body-font-size: 20px;
+$line-height: 1.4;
+
+$body-background-color: #ececec;
+
+$padding: 20px;
+
+$container-width: 850px;
+
+$mobile-breakpoint: 450px;
+
+@import 'type/_general.scss';
+@import 'type/_headings.scss';
+@import '_container.scss';
+@import '_animation.scss';
+@import '_header.scss';
+@import '_section.scss';

@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  /* Normalize */
+  margin: 0;
+  padding: 0;
+  background: $body-background-color;
+  overflow-x: hidden;
+
+  font-family: sans-serif;
+  font-size: $body-font-size;
+  line-height: $line-height;
+}

@@ -3,3 +3,5 @@ node_modules/
 npm-debug*
 .DS_Store
 test.ideas.txt
+*.min.css
+*.min.css.map
