@@ -317,3 +317,18 @@ header > .header-content > .nav-container > nav > ul > li > a {
 .body-image-left {
   float: left;
 }
+
+a#registration-notify {
+  width: 100%;
+  display: block;
+  max-width: 180px;
+  padding: 12px;
+  border: 2px solid white;
+  background: #67cbec;
+  margin: 0 auto;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 15px;
+  text-align: center;
+}
