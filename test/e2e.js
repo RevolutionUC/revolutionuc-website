@@ -56,11 +56,11 @@ describe('Suite 1', function() {
       .then(id => expect(id).to.equal('view-about'));
   });
 
-  it('should render contact content on /faq load', function() {
-    driver.get('http://localhost:8080/faq')
-      .then(() => driver.wait(until.elementLocated(webdriver.By.css('div[view]')), 4000).getAttribute('id'))
-      .then(id => expect(id).to.equal('view-faq'));
-  });
+  // it('should render contact content on /faq load', function() {
+  //   driver.get('http://localhost:8080/faq')
+  //     .then(() => driver.wait(until.elementLocated(webdriver.By.css('div[view]')), 4000).getAttribute('id'))
+  //     .then(id => expect(id).to.equal('view-faq'));
+  // });
 
   it('should load about content when about link is clicked', function() {
     driver.findElement(By.id('a-about')).click()
@@ -70,13 +70,13 @@ describe('Suite 1', function() {
       });
   });
 
-  it('should load about faq when faq link is clicked', function() {
-    driver.findElement(By.id('a-faq')).click()
-      .then(() => {
-        driver.wait(until.elementLocated(webdriver.By.css('div[view]')), 4000).getAttribute('id')
-          // .then(id => expect(id).to.equal('view-faq'));
-      });
-  });
+  // it('should load about faq when faq link is clicked', function() {
+  //   driver.findElement(By.id('a-faq')).click()
+  //     .then(() => {
+  //       driver.wait(until.elementLocated(webdriver.By.css('div[view]')), 4000).getAttribute('id')
+  //         // .then(id => expect(id).to.equal('view-faq'));
+  //     });
+  // });
 
   after(function(done) {
     driver.quit();
