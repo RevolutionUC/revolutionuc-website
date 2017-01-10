@@ -96,8 +96,12 @@ div.masthead {
 
 h1.masthead-title {
   position: absolute;
+  width: 100%;
+  max-width: 850px;
   bottom: 0;
-  left: 16%;
+  transform: translateX(-50%) !important;
+  left: 50%;
+  padding-left: 13px;
 }
 
 div.masthead::before {
