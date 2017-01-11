@@ -69,10 +69,16 @@ div.masthead {
   }
 }
 
-div.masthead-title {
-  position: absolute;
-  width: 100%;
+.masthead-content {
   bottom: 0;
+  position: absolute;
+  padding-bottom: 20px
+}
+h1.masthead-title {
+  font-size: 32px;
+}
+h3.masthead-subtitle {
+  font-family: 'Josefin Slab', serif;
 }
 
 div.masthead-title > h1 {
