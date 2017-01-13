@@ -69,8 +69,7 @@ div.masthead {
   }
 }
 
-.masthead-content {
-  bottom: 0;
+div.masthead-title {
   position: absolute;
   padding-bottom: 20px;
   width: 100%;
@@ -84,13 +83,15 @@ h1.masthead-title {
 h3.masthead-subtitle {
   font-family: serif;
   font-size: 20px;
+  width: 100%;
+  bottom: 0;
 }
 
-div.masthead-title > h1 {
+div.masthead-title > * {
   width: 100%;
   max-width: 850px;
-  padding: 0 20px;
-  margin: 20px auto;
+  padding: 0 10px;
+  margin: 10px auto;
 }
 
 div.masthead::before {
