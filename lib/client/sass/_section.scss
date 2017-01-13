@@ -75,6 +75,10 @@ div.masthead-title {
   bottom: 0;
 }
 
+div.masthead-title > h3:last-child {
+  padding-bottom: 10px;
+}
+
 div.masthead-title > h1, h3 {
   width: 100%;
   max-width: 850px;
