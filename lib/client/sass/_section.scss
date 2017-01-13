@@ -79,11 +79,12 @@ div.masthead-title > h1, h3 {
   width: 100%;
   max-width: 850px;
   padding: 0 20px;
-  margin: 0px auto 0px auto;
+  margin: 0 auto;
 }
+
 div.masthead-title > h3 {
-    font-family: serif;
-    font-size: 20px
+  font-family: serif;
+  font-size: 20px;
 }
 
 div.masthead::before {
