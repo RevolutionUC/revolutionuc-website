@@ -71,27 +71,19 @@ div.masthead {
 
 div.masthead-title {
   position: absolute;
-  padding-bottom: 20px;
-  width: 100%;
-  max-width: 850px;
-  padding: 0 20px;
-  margin: 20px auto;
-}
-h1.masthead-title {
-  font-size: 70px;
-}
-h3.masthead-subtitle {
-  font-family: serif;
-  font-size: 20px;
   width: 100%;
   bottom: 0;
 }
 
-div.masthead-title > * {
+div.masthead-title > h1, h3 {
   width: 100%;
   max-width: 850px;
-  padding: 0 10px;
-  margin: 10px auto;
+  padding: 0 20px;
+  margin: 0px auto 0px auto;
+}
+div.masthead-title > h3 {
+    font-family: serif;
+    font-size: 20px
 }
 
 div.masthead::before {
