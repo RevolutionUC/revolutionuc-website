@@ -1,37 +1,45 @@
-section.view-content {
-  contain: content; /*layout style paint */
-  top: 80px;
-  width: 100%;
-  position: absolute;
-  pointer-events: none;
-  background: transparent;
+img {
+  max-width: 100%;
 }
 
-section.view-content .animatable {
-  opacity: 0;
-  transform: translateX(20px);
-  transition: transform 0.3s cubic-bezier(0, 0, .3, 1),
-              opacity 0.3s cubic-bezier(0, 0, .3, 1);
-}
+section {
+  &.view-content {
+    contain: content; /*layout style paint */
+    top: 80px;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    background: transparent;
 
-section.view-content.visible .animatable {
-  will-change: transform, opacity;
-  opacity: 1;
-  pointer-events: auto;
-  transform: none;
-}
+    .animatable {
+      opacity: 0;
+      transform: translateX(20px);
+      transition: transform 0.3s cubic-bezier(0, 0, .3, 1),
+                  opacity 0.3s cubic-bezier(0, 0, .3, 1);
+    }
 
-section.view-content::before {
-  content: '';
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #ececec;
-  transition: opacity 0.3s cubic-bezier(0, 0, .3, 1);
+    &.visible {
+      .animatable {
+        will-change: transform, opacity;
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+      }
+    }
+
+    &::before {
+      content: '';
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #ececec;
+      transition: opacity 0.3s cubic-bezier(0, 0, .3, 1);
+    }
+  }
 }
 
 body::after {
@@ -105,7 +113,7 @@ div.masthead::before {
 }
 
 div[view] {
-  padding: 20px;
+  padding: 20px 0;
 }
 
 section.view-content.visible div.masthead::before {
@@ -114,19 +122,4 @@ section.view-content.visible div.masthead::before {
 
 body.view-pending::after {
   opacity: 1;
-}
-
-a#registration-notify {
-  width: 100%;
-  display: block;
-  max-width: 180px;
-  padding: 12px;
-  border: 2px solid white;
-  background: #67cbec;
-  margin: 0 auto;
-  text-decoration: none;
-  color: white;
-  letter-spacing: 1px;
-  font-size: 15px;
-  text-align: center;
 }

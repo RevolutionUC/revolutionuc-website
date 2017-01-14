@@ -1,0 +1,14 @@
+footer {
+  background-color: $blue-dark;
+  padding: $padding 0;
+
+  p {
+    margin: 0;
+    font-size: 15px;
+    color: $white;
+
+    a {
+      color: inherit;
+    }
+  }
+}

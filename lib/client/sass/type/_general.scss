@@ -10,7 +10,37 @@ html, body {
   background: $body-background-color;
   overflow-x: hidden;
 
-  font-family: sans-serif;
+  font-family: $body-font-family;
   font-size: $body-font-size;
   line-height: $line-height;
+
+  @media (max-width: $mobile-breakpoint) {
+    font-size: $body-font-size * 0.85;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+a {
+  color: $blue-dark;
+}
+
+p {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  @media (max-width: $mobile-breakpoint) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.list-inline {
+  padding: 0;
+
+  li {
+    display: inline;
+  }
 }

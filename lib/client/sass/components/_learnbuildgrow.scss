@@ -1,0 +1,61 @@
+.buildlearngrow {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  .buildlearngrow__item {
+    min-height: 600px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    background-color: #333; // for a slow loading image
+
+    @media (max-width: $tablet-breakpoint) {
+      min-height: 500px;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      min-height: 400px;
+    }
+
+    &.buildlearngrow__item--build {
+      background-image: url('/imgs/build.jpg');
+
+      .item__text {
+        background-color: $blue-dark;
+      }
+    }
+
+    &.buildlearngrow__item--learn {
+      background-image: url('/imgs/learn.jpg');
+
+      .item__text {
+        background-color: $orange;
+      }
+    }
+
+    &.buildlearngrow__item--grow {
+      background-image: url('/imgs/grow.jpg');
+
+      .item__text {
+        background-color: #333;
+      }
+    }
+
+    .item__text {
+      padding: 20px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+
+      h2, p {
+        margin: 0;
+        text-align: center;
+        color: #ffffff;
+
+        @media (max-width: $tablet-breakpoint) {
+          text-align: left;
+        }
+      }
+    }
+  }
+}

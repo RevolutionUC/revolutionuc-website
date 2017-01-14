@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  max-width: $container-width;
+  padding: 0 $padding;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 $padding;
+  margin: $padding / 2 0;
+}
+
+.background-blue-light {
+  background-color: $blue-light;
+  color: white;
+}
+
+.background-blue-dark {
+  background-color: $blue-dark;
+  color: white;
+}

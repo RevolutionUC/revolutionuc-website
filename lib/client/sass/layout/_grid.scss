@@ -1,0 +1,39 @@
+.row {
+  @include row();
+
+  .columns-6 {
+    @include span-columns(6);
+  }
+
+  .columns-4 {
+    @include span-columns(4);
+  }
+
+  .columns-3 {
+    @include span-columns(3);
+  }
+
+  .columns-6-table {
+    @include span-columns(6, block-collapse);
+  }
+
+  .columns-4-table {
+    @include span-columns(4, block-collapse);
+  }
+
+  .columns-3-table {
+    @include span-columns(4, block-collapse);
+  }
+
+  .columns-6,
+  .columns-4,
+  .columns-6-table,
+  .columns-4-table,
+  .columns-3,
+  .columns-3-table {
+    @media (max-width: $tablet-breakpoint) {
+      @include span-columns(12);
+      width: 100% !important; // fixes a bug with last columns not being 100%
+    }
+  }
+}
