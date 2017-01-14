@@ -3,7 +3,7 @@ header {
   display: block;
   width: 100%;
   margin: 0;
-  padding: 20px;
+  padding: 15px;
   position: fixed;
   z-index: 3;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, .6);
@@ -49,12 +49,12 @@ header > .header-content > .nav-container > nav > ul {
   width: auto;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 5px 0 0 0;
 }
 
 header > .header-content > .nav-container > nav > ul > li {
   display: inline-block;
-  padding: 6px 15px;
+  padding: 3px 15px;
 }
 
 header > .header-content > .nav-container > nav > ul > li:hover {
@@ -65,6 +65,7 @@ header > .header-content > .nav-container > nav > ul > li > a {
   text-decoration: none;
   color: white;
   font-size: 20px;
+  vertical-align: top;
 }
 
 @media (max-width: $mobile-breakpoint) {
