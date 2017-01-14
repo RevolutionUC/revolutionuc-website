@@ -1,7 +1,19 @@
 <div class="masthead" style="background-image: url(/imgs/<%= background %>)">
   <div class="masthead-title animatable">
-    <h1>
-      <%= title %>
-    </h1>
+    <% if (title != "") { %>
+      <h1>
+        <%- title %>
+      </h1>
+    <% } %>
+    <% if (subtitle != "") { %>
+      <h3>
+        <%- subtitle %>
+      </h3>
+    <% } %>
+    <% if (secondary_subtitle != "") { %>
+    <h3>
+      <%- secondary_subtitle %>
+    </h3>
+    <% } %>
   </div>
 </div>

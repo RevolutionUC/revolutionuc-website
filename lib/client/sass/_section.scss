@@ -75,11 +75,20 @@ div.masthead-title {
   bottom: 0;
 }
 
-div.masthead-title > h1 {
+div.masthead-title > h3:last-child {
+  padding-bottom: 10px;
+}
+
+div.masthead-title > * {
   width: 100%;
   max-width: 850px;
   padding: 0 20px;
-  margin: 20px auto;
+  margin: 0 auto;
+}
+
+div.masthead-title > h3 {
+  font-family: Lato;
+  font-size: 20px;
 }
 
 div.masthead::before {
