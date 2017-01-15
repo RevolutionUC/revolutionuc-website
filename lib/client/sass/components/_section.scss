@@ -42,23 +42,6 @@ section {
   }
 }
 
-body::after {
-  content: '';
-  opacity: 0;
-  position: absolute;
-  pointer-events: events;
-  top: 50%;
-  left: 50%;
-  width: 32px;
-  height: 32px;
-  margin: -16px -16px; /* center after top and left */
-  border-radius: 50%;
-  border: 2px solid slategray; /*#586986*/
-  border-top-color: transparent;
-  animation: spin 1.1s infinite linear;
-  transition: opacity 0.3s cubic-bezier(0, 0, .3, 1);
-}
-
 div.masthead {
   position: relative;
   width: 100%;
@@ -112,14 +95,31 @@ div.masthead::before {
   transition: opacity 0.3s cubic-bezier(0, 0, .3, 1);
 }
 
+div.masthead::after {
+  content: '';
+  opacity: 0;
+  position: absolute;
+  pointer-events: auto;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  margin: -16px -16px; /* center after top and left */
+  border-radius: 50%;
+  border: 2px solid $blue-dark;
+  border-top-color: transparent;
+  animation: spin 1.1s infinite linear;
+  transition: opacity 0.3s cubic-bezier(0, 0, .3, 1);
+}
+
+body.view-pending div.masthead::after {
+  opacity: 1;
+}
+
 div[view] {
   padding: 20px 0;
 }
 
 section.view-content.visible div.masthead::before {
   opacity: 0;
-}
-
-body.view-pending::after {
-  opacity: 1;
 }
