@@ -4,7 +4,7 @@
   "private": true,
   "author": "Dom Farolino <domfarolino@gmail.com> (https://domfarolino.com)",
   "scripts": {
-    "start": "npm run webpack-no-watch && sudo bash -ic \"node ./app\"",
+    "start": "npm run webpack-no-watch && npm serve-dev",
     "dev": "concurrently \"npm run webpack\" \"npm run serve-dev\" --kill-others",
     "serve-dev": "export PORT=8080 HTTPS_CHALLENGE_PORT=8081; node ./app",
     "test": "mocha test/e2e.js;",
