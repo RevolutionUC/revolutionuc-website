@@ -1,17 +1,32 @@
-$body-font-size: 20px;
-$line-height: 1.4;
+$body-font-size: 22px;
+$line-height: 1.5;
+$body-font-family: 'Lato', sans-serif;
 
-$body-background-color: #ececec;
+$body-background-color: #f9f9f9;
+$blue-light: #17e4ff;
+$blue-dark: #67cbec;
+$orange: #fa6f14;
+$white: #ffffff;
 
 $padding: 20px;
 
 $container-width: 850px;
 
-$mobile-breakpoint: 450px;
+$tablet-breakpoint: 992px;
+$mobile-breakpoint: 576px;
 
-@import 'type/_general.scss';
-@import 'type/_headings.scss';
-@import '_container.scss';
-@import '_animation.scss';
-@import '_header.scss';
-@import '_section.scss';
+// grid helpers
+@import '../../../node_modules/bourbon-neat/app/assets/stylesheets/neat';
+
+@import 'animation';
+@import 'type/general';
+@import 'type/headings';
+@import 'layout/container';
+@import 'layout/grid';
+@import 'components/header';
+@import 'components/section';
+@import 'components/learnbuildgrow';
+@import 'components/learnbuildgrow-card';
+@import 'components/button';
+@import 'components/socials';
+@import 'components/footer';

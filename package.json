@@ -1,6 +1,6 @@
 {
   "name": "revolutionuc-website",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "author": "Dom Farolino <domfarolino@gmail.com> (https://domfarolino.com)",
   "scripts": {
@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "body-parser": "^1.15.2",
+    "bourbon-neat": "^1.8.0",
     "cookie-parser": "^1.4.3",
     "debug": "^2.3.2",
     "dotenv": "^2.0.0",
