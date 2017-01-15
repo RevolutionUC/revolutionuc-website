@@ -15,7 +15,9 @@ html, body {
   line-height: $line-height;
 
   @media (max-width: $mobile-breakpoint) {
-    font-size: $body-font-size * 0.85;
+    p {
+      font-size: $body-font-size * 0.85;
+    }
   }
 }
 
