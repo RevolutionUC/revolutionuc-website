@@ -18,7 +18,7 @@
     }
 
     &.buildlearngrow__item--build {
-      background-image: url('/imgs/build.jpg');
+      background-image: url('/imgs/about-build.jpg');
 
       .item__text {
         background-color: $blue-dark;
@@ -26,7 +26,7 @@
     }
 
     &.buildlearngrow__item--learn {
-      background-image: url('/imgs/learn.jpg');
+      background-image: url('/imgs/about-learn.jpg');
 
       .item__text {
         background-color: $orange;
@@ -34,7 +34,7 @@
     }
 
     &.buildlearngrow__item--grow {
-      background-image: url('/imgs/grow.jpg');
+      background-image: url('/imgs/about-grow.jpg');
 
       .item__text {
         background-color: #333;
