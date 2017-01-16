@@ -22,6 +22,15 @@ npm run dev
 
 Navigate to `http://localhost:8080` in a browser.
 
+# Deploying
+
+If you have push access to the DO droplet you can run the following:
+
+```sh
+git remote add dokku dokku@revolutionuc.com:revolutionuc.com
+git push dokku master # this deploys the app
+```
+
 # Contributing
 
 > Better description on how the code is structured coming soon... (discuss .env file)
