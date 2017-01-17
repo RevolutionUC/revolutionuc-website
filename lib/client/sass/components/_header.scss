@@ -52,7 +52,6 @@ header > .header-content > .nav-container > nav > ul {
 
 header > .header-content > .nav-container > nav > ul > li {
   display: inline-block;
-  padding: 3px 15px;
 }
 
 header > .header-content > .nav-container > nav > ul > li:hover {
@@ -64,6 +63,7 @@ header > .header-content > .nav-container > nav > ul > li > a {
   color: white;
   font-size: 20px;
   vertical-align: top;
+  padding: 3px 15px;
 }
 
 @media (max-width: $mobile-breakpoint) {
