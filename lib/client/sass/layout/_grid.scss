@@ -15,14 +15,17 @@
 
   .columns-6-table {
     @include span-columns(6, block-collapse);
+    width: 50% !important;
   }
 
   .columns-4-table {
     @include span-columns(4, block-collapse);
+    width: percentage(1/3) !important;
   }
 
   .columns-3-table {
     @include span-columns(4, block-collapse);
+    width: percentage(1/4) !important;
   }
 
   .columns-6,
