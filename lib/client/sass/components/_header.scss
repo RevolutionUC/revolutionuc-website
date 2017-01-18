@@ -53,6 +53,7 @@ header > .header-content > .nav-container > nav > ul {
 header > .header-content > .nav-container > nav > ul > li {
   display: inline-block;
   padding: 3px 15px;
+  cursor: pointer;
 }
 
 header > .header-content > .nav-container > nav > ul > li:hover {
