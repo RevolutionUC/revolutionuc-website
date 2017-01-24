@@ -14,6 +14,10 @@ form {
 	padding: 15px;
 }
 
+.checkbox-item {
+  line-height: 17px;
+}
+
 .block.third, .third { width: 33.33%;}
 .block.eighth { width: 12.5%; }
 .block.fourth { width: 25%; }
@@ -22,7 +26,7 @@ form {
 .block.three-fourths { width: 75%; }
 .block.whole { width: 100%; }
 
-.checkbox-item.fourth { width: 25%; }
+.checkbox-item.fourth { width: 25%; padding: 10px; }
 .checkbox-item.half { width: 50%; }
 
 /* ------------------ */
@@ -33,7 +37,7 @@ form h1 {
 	margin: 0; padding: 0;
 	font-size: 32px;
 	text-transform: uppercase;
-	letter-spacing: 8px;
+	letter-spacing: 6px;
 }
 
 p { margin: 0;}
@@ -71,7 +75,7 @@ p { margin: 0;}
 
 /* General Form Elements */
 
-input[type=text], input[type=number], textarea {
+input[type=text], input[type=date], input[type=number], textarea {
 	width: 100%;
 	padding: 15px;
 	box-sizing: border-box;
@@ -95,7 +99,8 @@ label {
 	position: relative;
 	font-size: 18px;
 	text-transform: uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
+  vertical-align: middle;
 }
 
 label.tag {
@@ -119,13 +124,14 @@ input[type=radio] {
 /*input[type=radio]+label:before,*/
 input[type=radio]+label:before {
 	content: '';
-	height: 20px; width: 20px;
+	height: 20px;
+  width: 20px;
 	position: absolute;
-		left: -40px;
+  left: -40px;
 
 	font-size: 14px;
 	text-align: center;
-	line-height: 20px;
+	line-height: 13px;
 
 	border: 2px solid $blue-dark;
   border-radius: 50%;
@@ -133,10 +139,8 @@ input[type=radio]+label:before {
 
 /*input[type=radio]:checked + label:before {*/
 input[type=radio]:checked + label:before {
-	content: '\f00c';
-	font-family: 'FontAwesome';
-  padding-left: 2px;
-  width: 18px;
+  content: '⚫';
+  padding-left: 1px;
 }
 
 /* ------------------- */
