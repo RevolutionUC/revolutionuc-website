@@ -78,12 +78,11 @@ p { margin: 0;}
 input[type=text], input[type=date], input[type=number], textarea {
 	width: 100%;
 	padding: 15px;
-	box-sizing: border-box;
-
-	font-size: 16px;
-
-	background-color: inherit;
-	border: none;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: inherit;
+  border: none;
+  box-sizing: border-box;
 }
 
 input:focus { outline: none;}
