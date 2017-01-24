@@ -2,7 +2,6 @@ form {
   width: 100%;
 	position: relative;
 	border: 2px solid $blue-dark;
-  transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
 }
 
 .row { display: flex; }
@@ -134,56 +133,7 @@ input[type=radio]+label:before {
   border-radius: 50%;
 }
 
-/*input[type=radio]:checked + label:before {*/
 input[type=radio]:checked + label:before {
   content: '⚫';
   padding-left: 1px;
 }
-
-/* ------------------- */
-/* --- INDIVIDUALS --- */
-/* ------------------- */
-
-#if-you-can  > div,
-#if-you-wont > div { padding-top: 26px; }
-
-/* STEP BY STEP (MOON) */
-#moon-div ol {
-	height: 211px; /* Height of the three grid rows minus padding */
-	display: flex;
-	flex-direction: column;
-  justify-content: space-between;
-
-	padding: 0;
-  margin: 0;
-
-	font-size: 16px;
-
-	list-style: none;
-}
-
-#moon-div ol li {
-  position: relative;
-  padding-left: 40px;
-  height: 50px;
-}
-
-#moon-div ol li:before {
-	content: attr(number);
-  position: absolute;
-  left: 0;
-	display: inline-block;
-	height: 30px;
-	width: 30px;
-
-	text-align: center;
-	color: white;
-	background-color: $blue-dark;
-	line-height: 30px;
-
-	border-radius: 50%;
-}
-
-#moon-div ol li p { padding-top: 5px; }
-
-#moon-div-grid input[type=text] { text-align: center;}
