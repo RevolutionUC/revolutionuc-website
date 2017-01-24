@@ -5,31 +5,6 @@ form {
   transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
 }
 
-form.hide {
-  opacity: .2;
-}
-
-form.error {
-  border: 2px solid red;
-}
-
-form::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
-}
-
-form.success::after {
-  background-color: #aeff73;
-  opacity: .6;
-}
-
 .row { display: flex; }
 .row.space-around { justify-content: space-around; }
 
@@ -132,6 +107,11 @@ label.tag {
 	color: white;
 
 	background-color: $blue-dark;
+  transition: background-color 0.3s cubic-bezier(0, 0, 0.3, 1);
+}
+
+label.tag.error {
+  background-color: #ff3535;
 }
 
 /* CHECKBOXES & RADIOS */
