@@ -15,10 +15,6 @@ form {
 	padding: 15px;
 }
 
-.checkbox-item {
-  line-height: 17px;
-}
-
 .block.third, .third { width: 33.33%;}
 .block.eighth { width: 12.5%; }
 .block.fourth { width: 25%; }
@@ -27,7 +23,7 @@ form {
 .block.three-fourths { width: 75%; }
 .block.whole { width: 100%; }
 
-.checkbox-item.fourth { width: 25%; padding: 10px; }
+.checkbox-item.fourth { width: 25%;}
 .checkbox-item.half { width: 50%; }
 
 form h1#registrationTitle {
@@ -128,6 +124,7 @@ input[type=radio]+label:before {
   width: 20px;
 	position: absolute;
   left: -40px;
+  top: 0;
 
 	font-size: 14px;
 	text-align: center;
