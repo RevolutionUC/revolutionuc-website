@@ -1,0 +1,188 @@
+form {
+	position: relative;
+	width: 100%;
+	border: 2px solid $blue-dark;
+}
+
+.row { display: flex; }
+.row.space-around { justify-content: space-around; }
+
+.block {
+	position: relative;
+	box-sizing: border-box;
+	min-height: 75px;
+	padding: 15px;
+}
+
+.block.third, .third { width: 33.33%;}
+.block.eighth { width: 12.5%; }
+.block.fourth { width: 25%; }
+.block.half { width: 50%; }
+.block.two-thirds { width: 66.66%;}
+.block.three-fourths { width: 75%; }
+.block.whole { width: 100%; }
+
+.checkbox-item.fourth { width: 25%; }
+.checkbox-item.half { width: 50%; }
+
+/* ------------------ */
+/* --- TYPOGRAPHY --- */
+/* ------------------ */
+
+form h1 {
+	margin: 0; padding: 0;
+	font-size: 32px;
+	text-transform: uppercase;
+	letter-spacing: 8px;
+}
+
+p { margin: 0;}
+
+/* ------------------ */
+/* --- DECORATION --- */
+/* ------------------ */
+
+/* BORDERS */
+.b-top { border-top: 2px solid $blue-dark; }
+.b-left { border-left: 2px solid $blue-dark; }
+.b-bottom { border-bottom: 2px solid $blue-dark; }
+.b-right { border-right: 2px solid $blue-dark; }
+
+/* CIRCLES */
+.circle {
+	width: 10px;
+	height: 10px;
+
+	position: absolute;
+
+	background-color: white;
+	border: 2px solid $blue-dark;
+	border-radius: 50%;
+}
+
+.circle.top { top: -6px;}
+.circle.left { left: -6px;}
+.circle.bottom { bottom: -6px;}
+.circle.right { right: -6px;}
+
+/* --------------------- */
+/* --- FORM ELEMENTS --- */
+/* --------------------- */
+
+/* General Form Elements */
+
+input[type=text], input[type=number], textarea {
+	width: 100%;
+	padding: 15px;
+	box-sizing: border-box;
+
+	font-size: 16px;
+
+	background-color: inherit;
+	border: none;
+}
+
+input:focus { outline: none;}
+
+::-webkit-input-placeholder {
+	font-size: 16px;
+}
+
+/* LABELS */
+
+label {
+	margin: 0; padding: 0;
+	position: relative;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+label.tag {
+	position: absolute;
+		bottom: 0; left: 0;
+	padding: 5px;
+
+	font-size: 12px;
+	color: white;
+
+	background-color: $blue-dark;
+}
+
+/* CHECKBOXES & RADIOS */
+
+input[type=radio] {
+	width: 30px;
+	opacity: 0;
+}
+
+/*input[type=radio]+label:before,*/
+input[type=radio]+label:before {
+	content: '';
+	height: 20px; width: 20px;
+	position: absolute;
+		left: -40px;
+
+	font-size: 14px;
+	text-align: center;
+	line-height: 20px;
+
+	border: 2px solid $blue-dark;
+  border-radius: 50%;
+}
+
+/*input[type=radio]:checked + label:before {*/
+input[type=radio]:checked + label:before {
+	content: '\f00c';
+	font-family: 'FontAwesome';
+  padding-left: 2px;
+  width: 18px;
+}
+
+/* ------------------- */
+/* --- INDIVIDUALS --- */
+/* ------------------- */
+
+#if-you-can  > div,
+#if-you-wont > div { padding-top: 26px; }
+
+/* STEP BY STEP (MOON) */
+#moon-div ol {
+	height: 211px; /* Height of the three grid rows minus padding */
+	display: flex;
+	flex-direction: column;
+  justify-content: space-between;
+
+	padding: 0;
+  margin: 0;
+
+	font-size: 16px;
+
+	list-style: none;
+}
+
+#moon-div ol li {
+  position: relative;
+  padding-left: 40px;
+  height: 50px;
+}
+
+#moon-div ol li:before {
+	content: attr(number);
+  position: absolute;
+  left: 0;
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+
+	text-align: center;
+	color: white;
+	background-color: $blue-dark;
+	line-height: 30px;
+
+	border-radius: 50%;
+}
+
+#moon-div ol li p { padding-top: 5px; }
+
+#moon-div-grid input[type=text] { text-align: center;}
