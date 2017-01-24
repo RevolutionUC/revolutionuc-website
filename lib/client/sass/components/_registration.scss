@@ -1,7 +1,33 @@
 form {
+  width: 100%;
 	position: relative;
-	width: 100%;
 	border: 2px solid $blue-dark;
+  transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
+}
+
+form.hide {
+  opacity: .2;
+}
+
+form.error {
+  border: 2px solid red;
+}
+
+form::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
+}
+
+form.success::after {
+  background-color: #aeff73;
+  opacity: .6;
 }
 
 .row { display: flex; }
@@ -29,30 +55,22 @@ form {
 .checkbox-item.fourth { width: 25%; padding: 10px; }
 .checkbox-item.half { width: 50%; }
 
-/* ------------------ */
-/* --- TYPOGRAPHY --- */
-/* ------------------ */
-
-form h1 {
-	margin: 0; padding: 0;
-	font-size: 32px;
-	text-transform: uppercase;
-	letter-spacing: 6px;
+form h1#registrationTitle {
+	margin: 0;
+  padding: 0;
+	font-size: 40px;
+	letter-spacing: 2px;
+  text-align: center;
+  color: $blue-dark;
 }
 
-p { margin: 0;}
-
-/* ------------------ */
-/* --- DECORATION --- */
-/* ------------------ */
-
-/* BORDERS */
+/* Borders */
 .b-top { border-top: 2px solid $blue-dark; }
 .b-left { border-left: 2px solid $blue-dark; }
 .b-bottom { border-bottom: 2px solid $blue-dark; }
 .b-right { border-right: 2px solid $blue-dark; }
 
-/* CIRCLES */
+/* Circles */
 .circle {
 	width: 10px;
 	height: 10px;
@@ -69,11 +87,7 @@ p { margin: 0;}
 .circle.bottom { bottom: -6px;}
 .circle.right { right: -6px;}
 
-/* --------------------- */
-/* --- FORM ELEMENTS --- */
-/* --------------------- */
-
-/* General Form Elements */
+/* Form elements */
 
 input[type=text], input[type=date], input[type=number], textarea {
 	width: 100%;
@@ -82,16 +96,21 @@ input[type=text], input[type=date], input[type=number], textarea {
   font-family: inherit;
   background-color: inherit;
   border: none;
+  outline: none;
   box-sizing: border-box;
 }
 
 input:focus { outline: none;}
 
-::-webkit-input-placeholder {
-	font-size: 16px;
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $body-background-color inset;
 }
 
-/* LABELS */
+select {
+  width: 100%;
+}
+
+/* Labels */
 
 label {
 	margin: 0; padding: 0;
@@ -104,7 +123,9 @@ label {
 
 label.tag {
 	position: absolute;
-		bottom: 0; left: 0;
+	bottom: 0;
+  left: 0;
+  font-weight: bold;
 	padding: 5px;
 
 	font-size: 12px;
