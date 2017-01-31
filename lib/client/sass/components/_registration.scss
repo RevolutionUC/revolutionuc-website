@@ -134,6 +134,6 @@ input[type=radio]+label:before {
 }
 
 input[type=radio]:checked + label:before {
-  content: '⚫';
+  content: '\2022';
   padding-left: 1px;
 }
