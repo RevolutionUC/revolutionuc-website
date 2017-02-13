@@ -2,138 +2,189 @@ form {
   width: 100%;
 	position: relative;
 	border: 2px solid $blue-dark;
-}
 
-.row { display: flex; }
-.row.space-around { justify-content: space-around; }
+  .row { display: flex; }
+  .row.space-around { justify-content: space-around; }
 
-.block {
-	position: relative;
-	box-sizing: border-box;
-	min-height: 75px;
-	padding: 15px;
-}
+  .block {
+  	position: relative;
+  	box-sizing: border-box;
+  	min-height: 75px;
+  	padding: 18px 15px;
+  }
 
-.block.third, .third { width: 33.33%;}
-.block.eighth { width: 12.5%; }
-.block.fourth { width: 25%; }
-.block.half { width: 50%; }
-.block.two-thirds { width: 66.66%;}
-.block.three-fourths { width: 75%; }
-.block.whole { width: 100%; }
+  .block.third, .third { width: 33.33%;}
+  .block.eighth { width: 12.5%; }
+  .block.fourth { width: 25%; }
+  .block.half { width: 50%; }
+  .block.two-thirds { width: 66.66%;}
+  .block.three-fourths { width: 75%; }
+  .block.whole { width: 100%; }
 
-.checkbox-item.fourth { width: 25%;}
-.checkbox-item.half { width: 50%; }
+  .checkbox-item.fourth { width: 25%;}
+  .checkbox-item.half { width: 50%; }
 
-form h1#registrationTitle {
-	margin: 0;
-  padding: 0;
-	font-size: 40px;
-	letter-spacing: 2px;
-  text-align: center;
-  color: $blue-dark;
-}
+  h1#registrationTitle {
+  	margin: 0;
+    padding: 0;
+  	font-size: 40px;
+  	letter-spacing: 2px;
+    text-align: center;
+    color: $blue-dark;
+  }
 
-/* Borders */
-.b-top { border-top: 2px solid $blue-dark; }
-.b-left { border-left: 2px solid $blue-dark; }
-.b-bottom { border-bottom: 2px solid $blue-dark; }
-.b-right { border-right: 2px solid $blue-dark; }
+  /* Borders */
+  .b-top { border-top: 2px solid $blue-dark; }
+  .b-left { border-left: 2px solid $blue-dark; }
+  .b-bottom { border-bottom: 2px solid $blue-dark; }
+  .b-right { border-right: 2px solid $blue-dark; }
 
-/* Circles */
-.circle {
-	width: 10px;
-	height: 10px;
+  /* Circles */
+  .circle {
+  	width: 10px;
+  	height: 10px;
 
-	position: absolute;
+  	position: absolute;
 
-	background-color: white;
-	border: 2px solid $blue-dark;
-	border-radius: 50%;
-}
+  	background-color: white;
+  	border: 2px solid $blue-dark;
+  	border-radius: 50%;
+  }
 
-.circle.top { top: -6px;}
-.circle.left { left: -6px;}
-.circle.bottom { bottom: -6px;}
-.circle.right { right: -6px;}
+  .circle.top { top: -6px;}
+  .circle.left { left: -6px;}
+  .circle.bottom { bottom: -6px;}
+  .circle.right { right: -6px;}
 
-/* Form elements */
+  /* Form elements */
 
-input[type=text], input[type=date], input[type=number], textarea {
-	width: 100%;
-	padding: 15px;
-  font-size: 16px;
-  font-family: inherit;
-  background-color: inherit;
-  border: none;
-  outline: none;
-  box-sizing: border-box;
-}
+  input[type=text], input[type=date], input[type=number],
+  input[type=email], input[type=file], input[type=checkbox], textarea {
+  	width: 100%;
+  	padding: 15px;
+    font-size: 16px;
+    font-family: inherit;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+  }
 
-input:focus { outline: none;}
+  input:focus { outline: none;}
 
-input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px $body-background-color inset;
-}
+  input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px $body-background-color inset;
+  }
 
-select {
-  width: 100%;
-}
+  /* File input */
+  input[type=file] {
+    padding: 0;
+  }
 
-/* Labels */
+  /* Selects */
 
-label {
-	margin: 0; padding: 0;
-	position: relative;
-	font-size: 18px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-  vertical-align: middle;
-}
+  select {
+            appearance: none;
+       -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 0;
+    height: 24px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 2px solid $blue-dark;
+    font-size: 15px;
+    text-transform: uppercase;
 
-label.tag {
-	position: absolute;
-	bottom: 0;
-  left: 0;
-  font-weight: bold;
-	padding: 5px;
+    // css arrow
 
-	font-size: 12px;
-	color: white;
 
-	background-color: $blue-dark;
-  transition: background-color 0.3s cubic-bezier(0, 0, 0.3, 1);
-}
+    &:focus {
+      outline: none;
+    }
+  }
 
-label.tag.error {
-  background-color: #ff3535;
-}
+  /* Labels */
 
-/* CHECKBOXES & RADIOS */
+  label {
+  	margin: 0; padding: 0;
+  	position: relative;
+  	font-size: 18px;
+  	text-transform: uppercase;
+  	letter-spacing: 1px;
+    vertical-align: middle;
+  }
 
-input[type=radio] {
-	width: 30px;
-	opacity: 0;
-}
+  label.tag {
+  	position: absolute;
+  	bottom: 0;
+    left: 0;
+    font-weight: bold;
+  	padding: 5px;
 
-/*input[type=radio]+label:before,*/
-input[type=radio]+label:before {
-	content: '';
-	height: 20px;
-  width: 20px;
-	position: absolute;
-  left: -40px;
-  top: 0;
+  	font-size: 12px;
+  	color: white;
 
-	font-size: 14px;
-	text-align: center;
-	line-height: 13px;
+  	background-color: $blue-dark;
+    transition: background-color 0.3s cubic-bezier(0, 0, 0.3, 1);
+  }
 
-	border: 2px solid $blue-dark;
-  border-radius: 50%;
-}
+  label.tag.error {
+    background-color: #ff3535;
+  }
 
-input[type=radio]:checked + label:before {
-  content: '\2022';
-  padding-left: 1px;
+  /* CHECKBOXES & RADIOS */
+
+  input[type=radio] {
+  	width: 30px;
+  	opacity: 0;
+  }
+
+  /*input[type=radio]+label:before,*/
+  input[type=radio]+label:before {
+  	content: '';
+  	height: 20px;
+    width: 20px;
+  	position: absolute;
+    left: -40px;
+    top: 0;
+
+  	font-size: 14px;
+  	text-align: center;
+  	line-height: 13px;
+
+  	border: 2px solid $blue-dark;
+    border-radius: 50%;
+  }
+
+  input[type=radio]:checked + label:before {
+    background-color: $blue-dark;
+    padding-left: 1px;
+  }
+
+  input[type=checkbox] {
+    display: none;
+
+    &+ label {
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        margin-right: 8px;
+        margin-bottom: 4px;
+        padding: 0;
+        vertical-align: middle;
+        border: 2px solid $blue-dark;
+      }
+    }
+
+    &:checked + label {
+        &:before {
+          background-color: $blue-dark !important;
+      }
+    }
+  }
 }
