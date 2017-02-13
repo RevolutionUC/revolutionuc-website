@@ -120,14 +120,44 @@
             </div>
           </div>
 
+          <div class="row b-bottom">
+            <div class="block">
+              <label class="tag" for="ethnicity">Race/Ethnicity*</label>
+              <select name="ethnicity" id="ethnicity">
+                <option value="" disabled selected>Race or Ethnicity</option>
+                <option value="indian">American Indian or Alaskan Native</option>
+                <option value="asian">Asian</option>
+                <option value="black">Black or African American</option>
+                <option value="islander">Native Hawaiian or other Pacific Islander</option>
+                <option value="white">White</option>
+                <option value="latino">Hispanic or Latino</option>
+                <option value="prefer-not">Prefer not to respond</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row b-bottom">
+            <div class="block b-right half">
+              <label class="tag" for="hackathons">How many hackathons have you attended?</label>
+              <input name="hackathons" id="hackathons" type="text" placeholder="So many...">
+            </div>
+
+            <div class="block half">
+              <label class="tag" for="howYouHeard">How did you hear about RevUC?</label>
+              <input name="howYouHeard" id="howYouHeard" type="text" placeholder="Twitter!">
+            </div>
+          </div>
+
           <div class="row">
             <div class="block half b-bottom b-right">
               <input name="dataSharing" type="checkbox" class="button" id="dataSharing">
               <label for="dataSharing">MLH Data Sharing<sup>1</sup></label>
+              <label class="tag">I agree*</label>
             </div>
             <div class="block half b-bottom">
               <input name="codeOfConduct" type="checkbox" class="button" id="codeOfConduct">
               <label for="codeOfConduct">MLH Code of Conduct<sup>2</sup></label>
+              <label class="tag">I agree*</label>
             </div>
           </div>
           <div class="row">
