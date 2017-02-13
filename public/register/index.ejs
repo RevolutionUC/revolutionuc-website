@@ -1,0 +1,150 @@
+<% if(partial == false) { %> <% include ../header %> <% } %>
+
+    <% title= 'Register'; %>
+    <% subtitle = ''; %>
+    <% secondary_subtitle = ''; %>
+
+    <div view class="animatable" id="view-register">
+      <div class="container">
+        <form name="registration">
+          <div class="circle top left"></div>
+          <div class="circle top right"></div>
+          <div class="circle bottom left"></div>
+          <div class="circle bottom right"></div>
+
+          <div class="block b-bottom">
+            <h1 id="registrationTitle">Registration</h1>
+          </div>
+
+          <div class="block b-bottom">
+            <label class="tag" for="firstName">First Name*</label>
+            <input name="firstName" id="firstName" type="text" placeholder="Bob">
+          </div>
+
+          <div class="block b-bottom">
+            <label class="tag" for="lastName">Last Name*</label>
+            <input name="lastName" id="lastName" type="text" placeholder="Evans">
+          </div>
+
+          <div id="shirtSize" class="block row b-bottom">
+            <label class="tag" for="shirtSize">Shirt Size*</label>
+              <div class="checkbox-item fourth">
+                <input name="shirtSize" type="radio" id="small" value="small">
+                <label for="small">Small</label>
+              </div>
+
+              <div class="checkbox-item fourth">
+                <input name="shirtSize" type="radio" id="medium" value="medium">
+                <label for="medium">Medium</label>
+              </div>
+
+              <div class="checkbox-item fourth">
+                <input name="shirtSize" type="radio" id="large" value="large">
+                <label for="large">Large</label>
+              </div>
+
+              <div class="checkbox-item fourth">
+                <input name="shirtSize" type="radio" id="x-large" value="x-large">
+                <label for="x-large">X-Large</label>
+              </div>
+          </div>
+
+          <div class="block b-bottom">
+            <label class="tag" for="email">Email*</label>
+            <input name="email" id="email" type="email" placeholder="Email">
+          </div>
+
+          <div class="row b-bottom">
+            <div class="block half b-right">
+              <label class="tag" for="school">School*</label>
+              <input name="school" id="school" type="text" placeholder="University of Cincinnati">
+            </div>
+
+            <div class="block fourth b-right">
+              <label class="tag" for="major">Major*</label>
+              <input name="major" id="major" type="text" placeholder="Computer Science">
+            </div>
+
+            <div class="block fourth">
+              <label class="tag" for="dob">Date of birth*</label>
+              <input type="date" name="dob" id="dob">
+            </div>
+          </div>
+
+          <div class="block b-bottom">
+            <label class="tag" for="phoneNumber">Phone Number*</label>
+            <input name="phoneNumber" id="phoneNumber" type="text" placeholder="XXX-XXX-XXXX">
+          </div>
+
+          <div class="row b-bottom">
+            <div class="block half b-right">
+              <label class="tag">Dietary restrictions</label>
+              <textarea name="dietaryRestrictions" cols="30" rows="5" placeholder="Address dietary restrictions here"></textarea>
+            </div>
+
+            <div class="block half">
+              <label class="tag">Special accommodations</label>
+              <textarea name="accommodations" cols="30" rows="5" placeholder="Address special accommodations here"></textarea>
+            </div>
+          </div>
+
+          <div class="block b-bottom">
+            <label class="tag">GitHub</label>
+            <input name="githubUsername" type="text" placeholder="GitHub username">
+          </div>
+
+          <div class="row b-bottom">
+            <div class="block b-right third">
+              <label class="tag" for="education">Education*</label>
+              <select name="education" id="education">
+                <option value="" disabled selected>Level of Education</option>
+                <option value="high-school">High School</option>
+                <option value="undergraduate">Undergraduate</option>
+                <option value="graduate">Graduate</option>
+              </select>
+            </div>
+
+            <div class="block b-right third">
+              <label for="gender" class="tag">Gender*</label>
+              <select name="gender" id="gender">
+                <option value="" disabled selected>Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="non-binary">Non-binary</option>
+              </select>
+            </div>
+
+            <div class="block third">
+              <label class="tag" for="resume">Resume*</label>
+              <input name="resume" id="resume" type="file">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="block half b-bottom b-right">
+              <input name="dataSharing" type="checkbox" class="button">
+              <label for="dataSharing">MLH Data Sharing<sup>1</sup></label>
+            </div>
+            <div class="block half b-bottom">
+              <input name="codeOfConduct" type="checkbox" class="button">
+              <label for="codeOfConduct">MLH Code of Conduct<sup>2</sup></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="block">
+              <button name="registrationSubmit" type="submit" disabled class="button button--secondary">Register</button>
+            </div>
+          </div>
+        </form>
+
+        <section>
+          <p>
+            <small><sup>1</sup> I agree to the terms of both the <a href="https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions" target="_blank">MLH Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. Please note that you may receive pre and post-event informational e-mails and occasional messages about hackathons from MLH as per the MLH Privacy Policy.</small>
+            <br>
+            <small><sup>2</sup> I agree to at all times abide by and conform to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">Major League Hacking Code of Conduct</a> at the event.</small>
+          </p>
+        </section>
+      </div>
+    </div>
+
+<% if(partial == false) { %> <% include ../footer %> <% } %>
