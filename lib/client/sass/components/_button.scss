@@ -16,6 +16,11 @@
     width: 100%;
   }
 
+  &[disabled] {
+    background: darken($blue-dark, 20%);
+    cursor: none;
+  }
+
   &:hover {
     background: darken($blue-dark, 10%);
     cursor: pointer;
@@ -47,6 +52,11 @@
 
     &:hover {
       background: darken($orange, 10%);
+    }
+
+    &[disabled] {
+      background: darken($orange, 20%);
+      cursor: default;
     }
   }
 
