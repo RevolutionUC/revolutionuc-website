@@ -57,19 +57,25 @@ app.get('/api/v1', apiV1.index);
  */
 app.get(/\/([^.]*$)/, (request, response) => {
   request.requestedPage = request.params[0] || ''; // should be something like `` or `path`
-
   const data = {partial: 'partial' in request.query};
   const options = {};
-
   response.render(path.join(request.requestedPage), data, function(err, document) {
-    response.set({
-      'ETag': crypto.createHash('md5').update(document).digest('hex')
-    });
-
-    response.send(document);
+    if(err){
+      response.redirect('/404');
+    }
+    else{
+      response.set({
+        'ETag': crypto.createHash('md5').update(document).digest('hex')
+      });
+      response.send(document);
+    }
   });
 });
-
+app.get('/404', (request, response) => {
+  response.render(path.join(request.requestedPage), data, function(err, document) {
+    response.status(404).send(document);
+  });
+});
 /**
  * Static
  */
@@ -118,9 +124,8 @@ require('https').createServer(lex.httpsOptions, lex.middleware(app)).listen(proc
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  let err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+  console.log('Error 404');
+  res.status(404).render(path.join('404'));
 });
 
 // error handlers
