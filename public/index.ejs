@@ -8,20 +8,20 @@
 
     <div view class="animatable" id="view-home">
       <div class="container">
-        <p>
-          Interested? Get notified when registration opens!
-          <a class="button button--registration-notify" href="http://eepurl.com/cw1Iez">
-            <img src="/imgs/icons/notify.svg" alt="notifty icon">
-            <span>Notify Me</span>
-          </a>
-        </p>
+        <div>
+          <p router-link>
+            <a href="/register" class="button button--primary">Register Now</a>
+          </p>
+        </div>
 
-        <a class="buildlearngrow-card" href="/about">
-          <div class="buildlearngrow-card__text">
-            <h2>Build. Learn. Grow.</h2>
-            <p>RevolutionUC is open to all college and high school students</p>
-          </div>
-        </a>
+        <div class="buildlearngrow-card" router-link>
+          <a href="/about">
+            <div class="buildlearngrow-card__text">
+              <h2>Build. Learn. Grow.</h2>
+              <p>RevolutionUC is open to all college and high school students</p>
+            </div>
+          </a>
+        </div>
 
         <div class="socials">
           <ul class="list-inline">

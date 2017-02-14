@@ -1,17 +1,30 @@
 .button {
   display: inline-block;
-  padding: 12px;
+  border: 0;
+  outline: 0;
+  padding: 16px 20px;
   background: $blue-dark;
   margin: 0 auto;
   text-decoration: none;
   color: $white;
   letter-spacing: 1px;
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
 
   @media (max-width: $mobile-breakpoint) {
     display: block;
     width: 100%;
+  }
+
+  &[disabled] {
+    background: darken($white, 30%);
+    color: darken($white, 10%);
+    cursor: none;
+  }
+
+  &:hover {
+    background: darken($blue-dark, 10%);
+    cursor: pointer;
   }
 
   &.button--registration-notify {
@@ -31,5 +44,26 @@
       vertical-align: text-top;
       margin-left: 3px;
     }
+  }
+
+  &.button--primary {}
+
+  &.button--secondary {
+    background: $orange;
+
+    &:hover {
+      background: darken($orange, 10%);
+    }
+
+    &[disabled] {
+      background: darken($white, 30%);
+      color: darken($white, 10%);
+      cursor: default;
+    }
+  }
+
+  &.button--large {
+    padding: 18px 24px;
+    font-size: 20px;
   }
 }

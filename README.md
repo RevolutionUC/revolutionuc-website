@@ -4,7 +4,7 @@
 [![build status](https://api.travis-ci.org/RevolutionUC/revolutionuc-website.svg?branch=master)](https://api.travis-ci.org/revolutionuc/revolutionuc-website.svg?branch=master)
 [![Dependency Status](https://david-dm.org/RevolutionUC/revolutionuc-website.svg)](https://david-dm.org/revolutionuc/revolutionuc-website)
 [![devDependency Status](https://david-dm.org/RevolutionUC/revolutionuc-website/dev-status.svg)](https://david-dm.org/revolutionuc/revolutionuc-website#info=devDependencies)
-[![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
+[![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
 
 Spring 2017 (and possibly future) RevolutionUC University hackathon website "framework".
 
