@@ -124,8 +124,7 @@ require('https').createServer(lex.httpsOptions, lex.middleware(app)).listen(proc
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  console.log('Error 404');
-  res.status(404).render(path.join('404'));
+  res.redirect('/404');
 });
 
 // error handlers
