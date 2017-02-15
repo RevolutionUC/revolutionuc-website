@@ -25,7 +25,7 @@
     "mongoose": "^4.7.7",
     "morgan": "^1.7.0",
     "multer": "^1.2.1",
-    "revolutionuc-emails": "github:revolutionuc/revolutionuc-emails"
+    "revolutionuc-emails": "github:revolutionuc/revolutionuc-emails#v1.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
