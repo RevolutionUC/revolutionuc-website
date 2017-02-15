@@ -25,7 +25,8 @@
     "mongoose": "^4.7.7",
     "morgan": "^1.7.0",
     "multer": "^1.2.1",
-    "revolutionuc-emails": "github:revolutionuc/revolutionuc-emails#v1.0.0"
+    "revolutionuc-emails": "github:revolutionuc/revolutionuc-emails#v1.0.0",
+    "whatwg-fetch": "^2.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
