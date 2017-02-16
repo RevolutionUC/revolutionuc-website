@@ -1,0 +1,230 @@
+<% if(partial == false) { %> <% include ../header %> <% } %>
+
+    <% title= 'Register'; %>
+    <% subtitle = ''; %>
+    <% secondary_subtitle = ''; %>
+
+    <div view class="animatable" id="view-register">
+      <div class="container">
+        <form name="registration">
+          <div class="circle top left"></div>
+          <div class="circle top right"></div>
+          <div class="circle bottom left"></div>
+          <div class="circle bottom right"></div>
+
+          <div class="form-block b-bottom">
+            <h1 id="registrationTitle">Registration</h1>
+          </div>
+
+          <div class="row">
+            <div class="columns-12 form-block b-bottom">
+              <label class="tag" for="firstName">First Name*</label>
+              <div class="form-block__input">
+                <input name="firstName" id="firstName" type="text" placeholder="Bob">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="columns-12 form-block b-bottom">
+              <label class="tag" for="lastName">Last Name*</label>
+              <div class="form-block__input">
+                <input name="lastName" id="lastName" type="text" placeholder="Evans">
+              </div>
+            </div>
+          </div>
+
+          <div class="row b-bottom">
+            <div class="form-block" id="shirtSize">
+              <label class="tag" for="shirtSize">Shirt Size*</label>
+              <div class="form-block__input">
+                <div class="columns-3">
+                  <input name="shirtSize" type="radio" id="small" value="small">
+                  <label for="small">Small</label>
+                </div>
+
+                <div class="columns-3">
+                  <input name="shirtSize" type="radio" id="medium" value="medium">
+                  <label for="medium">Medium</label>
+                </div>
+
+                <div class="columns-3">
+                  <input name="shirtSize" type="radio" id="large" value="large">
+                  <label for="large">Large</label>
+                </div>
+
+                <div class="columns-3">
+                  <input name="shirtSize" type="radio" id="x-large" value="x-large">
+                  <label for="x-large">X-Large</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-block b-bottom">
+            <label class="tag" for="email">Email*</label>
+            <div class="form-block__input">
+              <input name="email" id="email" type="email" placeholder="Email">
+            </div>
+          </div>
+
+          <div class="row b-bottom">
+            <div class="form-block columns-4-table b-right">
+              <label class="tag" for="school">School*</label>
+              <div class="form-block__input">
+                <input name="school" id="school" type="text" placeholder="University of Cincinnati">
+              </div>
+            </div>
+
+            <div class="form-block columns-4-table b-right">
+              <label class="tag" for="major">Major*</label>
+              <div class="form-block__input">
+                <input name="major" id="major" type="text" placeholder="Computer Science">
+              </div>
+            </div>
+
+            <div class="form-block columns-4-table">
+              <label class="tag" for="dob">Date of birth*</label>
+              <div class="form-block__input">
+                <input type="date" placeholder="mm/dd/yyyy" name="dob" id="dob">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="columns-12 form-block b-bottom">
+              <label class="tag" for="phoneNumber">Phone Number*</label>
+              <div class="form-block__input">
+                <input name="phoneNumber" id="phoneNumber" type="text" placeholder="XXX-XXX-XXXX">
+              </div>
+            </div>
+          </div>
+
+          <div class="row b-bottom">
+            <div class="form-block columns-6-table b-right">
+              <label class="tag">Dietary restrictions</label>
+              <div class="form-block__input">
+                <textarea name="dietaryRestrictions" cols="30" rows="5" placeholder="Address any dietary restrictions here"></textarea>
+              </div>
+            </div>
+
+            <div class="form-block columns-6-table">
+              <label class="tag">Special accommodations</label>
+              <div class="form-block__input">
+                <textarea name="accommodations" cols="30" rows="5" placeholder="Address any special accommodations here"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-block columns-12 b-bottom">
+              <label class="tag">GitHub</label>
+              <div class="form-block__input">
+                <input name="githubUsername" type="text" placeholder="GitHub username">
+              </div>
+            </div>
+          </div>
+
+          <div class="row b-bottom">
+            <div class="form-block columns-4-table b-right">
+              <label class="tag" for="education">Education*</label>
+              <div class="form-block__input">
+                <select name="education" id="education">
+                  <option value="" disabled selected>Level of Education</option>
+                  <option value="high-school">High School</option>
+                  <option value="undergraduate">Undergraduate</option>
+                  <option value="graduate">Graduate</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-block columns-4-table b-right">
+              <label for="gender" class="tag">Gender*</label>
+              <div class="form-block__input">
+                <select name="gender" id="gender">
+                  <option value="" disabled selected>Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="non-binary">Non-binary</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-block columns-4-table">
+              <label class="tag" for="resume">Resume</label>
+              <div class="form-block__input">
+                <input name="resume" id="resume" type="file">
+              </div>
+            </div>
+          </div>
+
+          <div class="row b-bottom">
+            <div class="form-block columns-12">
+              <label class="tag" for="ethnicity">Race/Ethnicity*</label>
+              <div class="form-block__input">
+                <select name="ethnicity" id="ethnicity">
+                  <option value="" disabled selected>Race or Ethnicity</option>
+                  <option value="indian">American Indian or Alaskan Native</option>
+                  <option value="asian">Asian</option>
+                  <option value="black">Black or African American</option>
+                  <option value="islander">Native Hawaiian or other Pacific Islander</option>
+                  <option value="white">White</option>
+                  <option value="latino">Hispanic or Latino</option>
+                  <option value="prefer-not">Prefer not to respond</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row b-bottom">
+            <div class="form-block columns-6-table b-right">
+              <label class="tag" for="hackathons">How many hackathons have you attended?</label>
+              <div class="form-block__input">
+                <input name="hackathons" id="hackathons" type="text" placeholder="So many...">
+              </div>
+            </div>
+
+            <div class="form-block columns-6-table">
+              <label class="tag" for="howYouHeard">How did you hear about RevUC?</label>
+              <div class="form-block__input">
+                <input name="howYouHeard" id="howYouHeard" type="text" placeholder="Twitter!">
+              </div>
+            </div>
+          </div>
+
+          <div class="row b-bottom">
+            <div class="form-block columns-6-table b-right">
+              <div class="form-block__input">
+                <input name="dataSharing" type="checkbox" class="button" id="dataSharing">
+                <label for="dataSharing">MLH Data Sharing<sup><a href="#agree-1">1</a></sup></label>
+              </div>
+              <label class="tag">I agree*</label>
+            </div>
+
+            <div class="form-block columns-6-table">
+              <div class="form-block__input">
+                <input name="codeOfConduct" type="checkbox" class="button" id="codeOfConduct">
+                <label for="codeOfConduct">MLH Code of Conduct<sup><a href="#agree-2">2</a></sup></label>
+              </div>
+              <label class="tag">I agree*</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-block">
+              <button name="registrationSubmit" type="submit" disabled class="button button--secondary">Register</button>
+            </div>
+          </div>
+        </form>
+
+        <section>
+          <p>
+            <small><sup id="agree-1">1</sup> I agree to the terms of both the <a href="https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions" target="_blank">MLH Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. Please note that you may receive pre and post-event informational e-mails and occasional messages about hackathons from MLH as per the MLH Privacy Policy.</small>
+            <br>
+            <small><sup id="agree-2">2</sup> I agree to at all times abide by and conform to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">Major League Hacking Code of Conduct</a> at the event.</small>
+          </p>
+        </section>
+      </div>
+    </div>
+
+<% if(partial == false) { %> <% include ../footer %> <% } %>

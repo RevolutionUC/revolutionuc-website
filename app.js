@@ -9,6 +9,7 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const LEX = require('letsencrypt-express');
 const cookieParser = require('cookie-parser');
+const expressValidator = require('express-validator');
 
 const express = require('express');
 const app = express();
@@ -19,6 +20,7 @@ const app = express();
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(expressValidator([]));
 app.use(cookieParser());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './public'));
@@ -42,9 +44,7 @@ app.get('*', (request, response, next) => {
  * API setup
  */
 const apiV1 = require('./lib/controllers/api/v1');
-
-app.get('/api/v1*', apiV1.apiMiddleware); // Sets headers for every API route and calls .next()
-app.get('/api/v1', apiV1.index);
+app.use('/api/v1', apiV1);
 
 /**
  * Support for partial view rendering. This handler matches requests like: `/`, `/path`, and `/path/`

@@ -1,6 +1,6 @@
 {
   "name": "revolutionuc-website",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "author": "Dom Farolino <domfarolino@gmail.com> (https://domfarolino.com)",
   "scripts": {
@@ -19,10 +19,14 @@
     "dotenv": "^2.0.0",
     "ejs": "^2.5.5",
     "express": "^4.14.0",
+    "express-validator": "^3.1.2",
     "http2": "^3.3.2",
     "letsencrypt-express": "^2.0.5",
+    "mongoose": "^4.7.7",
     "morgan": "^1.7.0",
-    "revolutionuc-emails": "github:revolutionuc/revolutionuc-emails"
+    "multer": "^1.2.1",
+    "revolutionuc-emails": "github:revolutionuc/revolutionuc-emails#v1.0.0",
+    "whatwg-fetch": "^2.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
