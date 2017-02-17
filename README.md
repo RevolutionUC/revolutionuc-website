@@ -17,6 +17,7 @@ git clone git@github.com:revolutionuc/revolutionuc-website.git
 cd revolutionuc-website
 npm install
 cp .env.example .env
+# get environment variables from someone with write access
 npm run dev
 ```
 
@@ -24,7 +25,7 @@ Navigate to `http://localhost:8080` in a browser.
 
 # Deploying
 
-If you have push access to the DO droplet you can run the following:
+If you have push access to the DO droplet, you can deploy the site by running:
 
 ```sh
 git remote add dokku dokku@revolutionuc.com:revolutionuc.com
