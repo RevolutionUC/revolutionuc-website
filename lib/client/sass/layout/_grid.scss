@@ -38,7 +38,7 @@
   .columns-4-table,
   .columns-3,
   .columns-3-table {
-    @media (max-width: $tablet-breakpoint) {
+    @media (max-width: $mobile-breakpoint) {
       @include span-columns(12);
       width: 100% !important; // fixes a bug with last columns not being 100%
       float: none;
