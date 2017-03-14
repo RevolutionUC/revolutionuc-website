@@ -1,0 +1,9 @@
+//special bg color for sponsor page
+#view-sponsors {
+  background-color: #ffffff;
+}
+  @media (max-width: $mobile-breakpoint) {
+    .columns-3.empty{
+        display: none;     
+    }
+}
