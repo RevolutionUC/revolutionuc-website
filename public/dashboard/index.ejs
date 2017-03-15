@@ -1,0 +1,20 @@
+<% if(partial == false) { %> <% include ../header %> <% } %>
+
+    <% title= 'Email Verified'; %>
+    <% subtitle = ''; %>
+    <% secondary_subtitle = ''; %>
+
+    <div view class="animatable" id="view-check-email">
+      <div class="container">
+        <h1>Check the console!</h1>
+      </div>
+    </div>
+
+    <script>
+      let attrsToShow = ['firstName', 'lastName', 'registrationTime', 'attendanceConfirmed', 'emailVerified', 'checkedIn']
+      fetch('/api/v1/registration/all')
+        .then(res => res.json())
+        .then(_ => {console.table(_, attrsToShow)});
+    </script>
+
+<% if(partial == false) { %> <% include ../footer %> <% } %>
