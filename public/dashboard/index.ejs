@@ -4,17 +4,51 @@
     <% subtitle = ''; %>
     <% secondary_subtitle = ''; %>
 
-    <div view class="animatable" id="view-check-email">
-      <div class="container">
-        <h1>Check the console!</h1>
-      </div>
-    </div>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/1.10.8/js/jquery.dataTables.min.js" type="text/javascript"></script>
+
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th, td {
+          border: 1px solid black;
+          padding: 4px 16px;
+      }
+      th {
+          background-color: #67cbec;
+          cursor: pointer;
+      }
+    </style>
 
     <script>
-      let attrsToShow = ['firstName', 'lastName', 'registrationTime', 'attendanceConfirmed', 'emailVerified', 'checkedIn']
-      fetch('/api/v1/registration/all')
-        .then(res => res.json())
-        .then(_ => {console.table(_, attrsToShow)});
+      function fetchRegistrants() {
+        fetch(`/api/v1/registration/all?key=${document.querySelector('#apiKey').value}`)
+          .then(res => res.json())
+          .then(_ => {
+            $("table").DataTable({
+              data: _,
+              columns: [
+                {"data": 'email', title: 'Email'},
+                {"data": 'registrationTime', title: 'Registration Time'},
+                {"data": 'emailVerified', title: 'Verified'},
+                {"data": 'waitList', title: 'Wait-listed'},
+              ]
+            });
+          })
+      }
     </script>
+
+    <div view class="animatable" id="view-check-email">
+      <div class="container">
+        <h1>Registrant Dashboard</h1>
+        <input type="text" id="apiKey" placeholder="API Key">
+        <button onclick="fetchRegistrants()">Fetch Registrants</button>
+        <table style="font-size: 15px;margin:0 auto;">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
 
 <% if(partial == false) { %> <% include ../footer %> <% } %>
