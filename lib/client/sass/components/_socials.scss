@@ -14,11 +14,15 @@
 
       a {
         text-decoration: none;
-
-        img {
-          max-width: 50px;
-        }
       }
     }
   }
+}
+
+.social-media img {
+  max-width: 50px;
+}
+
+.devpost img {
+  max-width: 90px;
 }
