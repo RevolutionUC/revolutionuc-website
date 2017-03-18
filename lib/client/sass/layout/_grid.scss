@@ -16,6 +16,9 @@
   .columns-3 {
     @include span-columns(3);
   }
+  .columns-2 {
+    @include span-columns(2);
+  }
 
   .columns-6-table {
     @include span-columns(6, block-collapse);
