@@ -3,11 +3,8 @@
   background-color: #ffffff;
 }
   @media (max-width: $mobile-breakpoint) {
-    .columns-3.empty{
+    .empty{
         display: none;     
-    }
-    .columns-2.empty{
-      display: none;
     }
 
 }
