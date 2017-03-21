@@ -2,8 +2,15 @@
 #view-sponsors {
   background-color: #ffffff;
 }
+#mlh {
+  height: 150px;
+  margin-top: 20%;
+}
   @media (max-width: $mobile-breakpoint) {
-    .columns-3.empty{
-        display: none;     
+    .columns-3.empty, .columns-2.empty, .columns-1.empty{
+        display: none;
+    }
+    #mlh{
+      height:initial;
     }
 }
