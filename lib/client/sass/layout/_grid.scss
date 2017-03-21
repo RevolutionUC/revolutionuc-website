@@ -2,19 +2,23 @@
   @include row();
 
   .columns-6 {
-    @include span-columns(12);
-  }
-
-  .columns-6 {
     @include span-columns(6);
   }
-
+  .columns-5 {
+    @include span-columns(5);
+  }
   .columns-4 {
     @include span-columns(4);
   }
 
   .columns-3 {
     @include span-columns(3);
+  }
+  .columns-2 {
+    @include span-columns(2);
+  }
+  .columns-1 {
+    @include span-columns(1);
   }
 
   .columns-6-table {
@@ -33,6 +37,7 @@
   }
 
   .columns-6,
+  .columns-5,
   .columns-4,
   .columns-6-table,
   .columns-4-table,
