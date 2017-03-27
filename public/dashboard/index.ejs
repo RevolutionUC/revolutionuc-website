@@ -25,24 +25,45 @@
       function fetchRegistrants() {
         fetch(`/api/v1/registration/all?key=${document.querySelector('#apiKey').value}`)
           .then(res => res.json())
-          .then(_ => {
+          .then(data => {
+            if ($.fn.DataTable.isDataTable("table")) $('table').DataTable().clear().destroy();
             $("table").DataTable({
-              data: _,
+              data: data,
               columns: [
                 {"data": 'email', title: 'Email'},
-                {"data": 'registrationTime', title: 'Registration Time'},
                 {"data": 'emailVerified', title: 'Verified'},
-                {"data": 'waitList', title: 'Wait-listed'},
+                {"data": 'waitList', title: 'Waitlisted'},
+                {"data": 'receivedAttendanceConfirmationEmail', title: 'Sent Attendance Confirmation Email'},
+                {"data": 'attendanceConfirmed', title: 'Confirmed Attendance'},
               ]
             });
-          })
+          });
+      }
+
+      function sendWaitlistEmail() {
+        fetch(`/api/v1/registration/sendConfirmation?key=${document.querySelector('#apiKey').value}`)
       }
     </script>
 
     <div view class="animatable" id="view-check-email">
       <div class="container">
         <h1>Registrant Dashboard</h1>
+
+        <hr>
+        <h3>Authentication:</h3>
         <input type="text" id="apiKey" placeholder="API Key">
+
+        <hr>
+        <h3>Send waitlist email to every registrant such that:</h3>
+        <ol>
+          <li>Email has been verified</li>
+          <li>Registrant does not appear on the waitlist</li>
+          <li>Registrant has not confirmed their attendance with us yet</li>
+        </ol>
+        <button onclick="sendWaitlistEmail()">Send attendance confirmation email</button>
+
+        <hr>
+        <h3>Fetch registrants</h3>
         <button onclick="fetchRegistrants()">Fetch Registrants</button>
         <table style="font-size: 15px;margin:0 auto;">
           <thead></thead>
