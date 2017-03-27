@@ -6,11 +6,17 @@
 
     <div view class="animatable" id="view-check-email">
       <div class="container">
-        <h1>Attendance Confirmed!</h1>
-        <p>
-          Thank you for confirming your attendance with us! If you've confirmed that you will be attending
-          RevoutionUC please be sure to email us at <a href="mailto:info@revolutionuc.com">info@revolutionuc.com</a> if you can no longer make it.
-        </p>
+
+        <% if (confirmAttendance) { %>
+          <h1>Attendance Confirmed!</h1>
+          <p>
+            Thank you for confirming your attendance with us! If something comes up and you are no longer able to attend the event
+            please be sure to email us at <a href="mailto:info@revolutionuc.com">info@revolutionuc.com</a>.
+          </p>
+        <% } else { %>
+          <h1>Sorry to see you go!</h1>
+          <p>Sorry you couldn't make it, hope to see you next time! If you made this decision in error please email us at <a href="mailto:info@revolutionuc.com">info@revolutionuc.com</a></p>
+        <% } %>
       </div>
     </div>
 
