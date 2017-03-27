@@ -1,0 +1,75 @@
+<% if(partial == false) { %> <% include ../header %> <% } %>
+
+    <% title= 'Email Verified'; %>
+    <% subtitle = ''; %>
+    <% secondary_subtitle = ''; %>
+
+    <script src="//code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/1.10.8/js/jquery.dataTables.min.js" type="text/javascript"></script>
+
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th, td {
+          border: 1px solid black;
+          padding: 4px 16px;
+      }
+      th {
+          background-color: #67cbec;
+          cursor: pointer;
+      }
+    </style>
+
+    <script>
+      function fetchRegistrants() {
+        fetch(`/api/v1/registration/all?key=${document.querySelector('#apiKey').value}`)
+          .then(res => res.json())
+          .then(data => {
+            if ($.fn.DataTable.isDataTable("table")) $('table').DataTable().clear().destroy();
+            $("table").DataTable({
+              data: data,
+              columns: [
+                {"data": 'email', title: 'Email'},
+                {"data": 'emailVerified', title: 'Verified'},
+                {"data": 'waitList', title: 'Waitlisted'},
+                {"data": 'receivedAttendanceConfirmationEmail', title: 'Sent Attendance Confirmation Email'},
+                {"data": 'attendanceConfirmed', title: 'Confirmed Attendance'},
+              ]
+            });
+          });
+      }
+
+      function sendWaitlistEmail() {
+        fetch(`/api/v1/registration/sendConfirmation?key=${document.querySelector('#apiKey').value}`)
+      }
+    </script>
+
+    <div view class="animatable" id="view-check-email">
+      <div class="container">
+        <h1>Registrant Dashboard</h1>
+
+        <hr>
+        <h3>Authentication:</h3>
+        <input type="text" id="apiKey" placeholder="API Key">
+
+        <hr>
+        <h3>Send waitlist email to every registrant such that:</h3>
+        <ol>
+          <li>Email has been verified</li>
+          <li>Registrant does not appear on the waitlist</li>
+          <li>Registrant has not been sent an attendance confirmation email yet</li>
+        </ol>
+        <button onclick="sendWaitlistEmail()">Send attendance confirmation email</button>
+
+        <hr>
+        <h3>Fetch registrants</h3>
+        <button onclick="fetchRegistrants()">Fetch Registrants</button>
+        <table style="font-size: 15px;margin:0 auto;">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+<% if(partial == false) { %> <% include ../footer %> <% } %>

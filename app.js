@@ -57,13 +57,12 @@ app.use('/api/v1', apiV1);
  */
 app.get(/\/([^.]*$)/, (request, response) => {
   request.requestedPage = request.params[0] || ''; // should be something like `` or `path`
-  const data = {partial: 'partial' in request.query};
+  const data = {partial: 'partial' in request.query, confirmAttendance: request.query.confirm == 'YES'};
   const options = {};
   response.render(path.join(request.requestedPage), data, function(err, document) {
     if(err){
       response.redirect('/404');
-    }
-    else{
+    } else {
       response.set({
         'ETag': crypto.createHash('md5').update(document).digest('hex')
       });
@@ -71,11 +70,13 @@ app.get(/\/([^.]*$)/, (request, response) => {
     }
   });
 });
+
 app.get('/404', (request, response) => {
   response.render(path.join(request.requestedPage), data, function(err, document) {
     response.status(404).send(document);
   });
 });
+
 /**
  * Static
  */
@@ -84,7 +85,6 @@ app.use('/', express.static(path.join(__dirname, 'public')));
 /**
  * Letsencrypt and other stuff below
  */
-
 const lex = LEX.create({
   server: 'staging',
   //configDir: require('os').homedir() + '/letsencrypt/etc',
