@@ -34,7 +34,7 @@
                 {"data": 'emailVerified', title: 'Verified'},
                 {"data": 'waitList', title: 'Waitlisted'},
                 {"data": 'receivedAttendanceConfirmationEmail', title: 'Sent Attendance Confirmation Email'},
-                {"data": 'attendanceConfirmed', title: 'Confirmed Attendance'},
+                {"data": 'attendanceConfirmed', title: 'Attending'},
               ]
             });
           });
@@ -42,6 +42,10 @@
 
       function sendWaitlistEmail() {
         fetch(`/api/v1/registration/sendConfirmation?key=${document.querySelector('#apiKey').value}`)
+      }
+
+      function sendSubset() {
+        fetch(`/api/v1/registration/sendSubsetConfirmation?key=${document.querySelector('#apiKey').value}`)
       }
     </script>
 
@@ -61,6 +65,8 @@
           <li>Registrant has not been sent an attendance confirmation email yet</li>
         </ol>
         <button onclick="sendWaitlistEmail()">Send attendance confirmation email</button>
+
+        <button onclick="sendSubset()">Send SUBSET attendance confirmation email</button>
 
         <hr>
         <h3>Fetch registrants</h3>
