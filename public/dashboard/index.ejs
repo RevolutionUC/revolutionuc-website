@@ -21,6 +21,38 @@
       }
     </style>
 
+    <div view class="animatable" id="view-check-email">
+      <div class="container">
+        <h1>Registrant Dashboard</h1>
+
+        <hr>
+        <h3>Authentication:</h3>
+        <input type="text" id="apiKey" placeholder="API Key">
+
+        <hr>
+        <h3>Send waitlist email to every registrant such that:</h3>
+        <ol>
+          <li>Email has been verified</li>
+          <li>Registrant does not appear on the waitlist</li>
+          <li>Registrant has not been sent an attendance confirmation email yet</li>
+        </ol>
+        <button onclick="sendWaitlistEmail()">Send attendance confirmation email</button>
+        <hr>
+        <h3>Send waitlist email to an individual:</h3>
+        <small><i>Note, this action removes the user from the waitlist if they are on it, and sends the attendance confirmation email regardless of whether they've already gotten one.</i></small>
+        <br>
+        <input id="individualEmail" type="text" placeholder="individual@mail.uc.edu">
+        <button onclick="sendConfirmationIndividual()">Send individual attendance confirmation</button>
+        <hr>
+        <h3>Fetch registrants</h3>
+        <button onclick="fetchRegistrants()">Fetch Registrants</button>
+        <table style="font-size: 15px;margin:0 auto;">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
     <script>
       function fetchRegistrants() {
         fetch(`/api/v1/registration/all?key=${document.querySelector('#apiKey').value}`)
@@ -44,38 +76,9 @@
         fetch(`/api/v1/registration/sendConfirmation?key=${document.querySelector('#apiKey').value}`)
       }
 
-      function sendSubset() {
-        fetch(`/api/v1/registration/sendSubsetConfirmation?key=${document.querySelector('#apiKey').value}`)
+      function sendConfirmationIndividual() {
+        fetch(`/api/v1/registration/sendConfirmationIndividual?key=${document.querySelector('#apiKey').value}&userEmail=${document.querySelector('#individualEmail').value}`);
       }
     </script>
-
-    <div view class="animatable" id="view-check-email">
-      <div class="container">
-        <h1>Registrant Dashboard</h1>
-
-        <hr>
-        <h3>Authentication:</h3>
-        <input type="text" id="apiKey" placeholder="API Key">
-
-        <hr>
-        <h3>Send waitlist email to every registrant such that:</h3>
-        <ol>
-          <li>Email has been verified</li>
-          <li>Registrant does not appear on the waitlist</li>
-          <li>Registrant has not been sent an attendance confirmation email yet</li>
-        </ol>
-        <button onclick="sendWaitlistEmail()">Send attendance confirmation email</button>
-
-        <button onclick="sendSubset()">Send SUBSET attendance confirmation email</button>
-
-        <hr>
-        <h3>Fetch registrants</h3>
-        <button onclick="fetchRegistrants()">Fetch Registrants</button>
-        <table style="font-size: 15px;margin:0 auto;">
-          <thead></thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </div>
 
 <% if(partial == false) { %> <% include ../footer %> <% } %>
