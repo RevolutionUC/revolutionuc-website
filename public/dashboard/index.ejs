@@ -30,7 +30,7 @@
         <input type="text" id="apiKey" placeholder="API Key">
 
         <hr>
-        <h3>Send waitlist email to every registrant such that:</h3>
+        <h3>Send confirm attendance email to every registrant such that:</h3>
         <ol>
           <li>Email has been verified</li>
           <li>Registrant does not appear on the waitlist</li>
@@ -38,11 +38,16 @@
         </ol>
         <button onclick="sendWaitlistEmail()">Send attendance confirmation email</button>
         <hr>
-        <h3>Send waitlist email to an individual:</h3>
+        <h3>Send confirm attendance email to an individual:</h3>
         <small><i>Note, this action removes the user from the waitlist if they are on it, and sends the attendance confirmation email regardless of whether they've already gotten one.</i></small>
         <br>
         <input id="individualEmail" type="text" placeholder="individual@mail.uc.edu">
         <button onclick="sendConfirmationIndividual()">Send individual attendance confirmation</button>
+        <hr>
+        <h3>Send confirmation email to sitting ducks:</h3>
+        <small><i>Note, this action sends confirmation attendance emails to people who have received them, but have not confirmed/denied their attendance yet.</i></small>
+        <br>
+        <button onclick="sendConfirmationSittingDucks()">Send confirmation email to sitting ducks</button>
         <hr>
         <h3>Fetch registrants</h3>
         <button onclick="fetchRegistrants()">Fetch Registrants</button>
@@ -78,6 +83,10 @@
 
       function sendConfirmationIndividual() {
         fetch(`/api/v1/registration/sendConfirmationIndividual?key=${document.querySelector('#apiKey').value}&userEmail=${document.querySelector('#individualEmail').value}`);
+      }
+
+      function sendConfirmationSittingDucks() {
+        fetch(`/api/v1/registration/sendConfirmationToSittingDucks?key=${document.querySelector('#apiKey').value}`);
       }
     </script>
 
