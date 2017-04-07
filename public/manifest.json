@@ -35,5 +35,6 @@
     "src": "/imgs/revuc@192.png",
     "sizes": "192x192",
     "type": "image/png"
-  }]
+  }],
+  "gcm_sender_id": "456445283051"
 }

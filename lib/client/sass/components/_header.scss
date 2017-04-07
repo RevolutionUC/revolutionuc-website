@@ -11,7 +11,7 @@ header {
 }
 
 header > .header-content {
-  max-width: 900px;
+  max-width: 950px;
   margin: 0 auto;
 }
 
@@ -34,7 +34,7 @@ header > .header-content > .nav-container {
   float: right;
 }
 
-header > .header-content > .nav-container > input[type="checkbox"] {
+header > .header-content > .nav-container > input[type=checkbox] {
   position: absolute;
   opacity: 0;
 }
@@ -54,6 +54,7 @@ header > .header-content > .nav-container > nav > ul > li {
   display: inline-block;
   padding: 3px 15px;
   cursor: pointer;
+  color: white;
 
   &:hover {
     background: rgba(40, 40, 40, 0.2);
@@ -65,17 +66,23 @@ header > .header-content > .nav-container > nav > ul > li {
     &:hover {
       background-color: darken($orange, 10%);
     }
+
+    &[disabled=true] {
+      background-color: #a0a0a0;
+      color: #c5c5c5;
+      cursor: not-allowed;
+    }
   }
 }
 
 header > .header-content > .nav-container > nav > ul > li > a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
   font-size: 20px;
   vertical-align: top;
 }
 
-@media (max-width: 805px) {
+@media (max-width: 950px) {
   /* Nav styles */
   header > .header-content > .nav-container > nav {
     will-change: transform;
