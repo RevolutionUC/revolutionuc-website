@@ -29,7 +29,7 @@
         <h3>Authentication:</h3>
         <input type="password" id="apiKey" placeholder="API Key">
 
-        <hr>
+        <!--<hr>
         <h3>Send confirm attendance email to every registrant such that:</h3>
         <ol>
           <li>Email has been verified</li>
@@ -55,7 +55,14 @@
         <h3>Send confirmation email to the waitlisted:</h3>
         <small><i>Note, this action sends confirmation attendance emails to all people appearing on the waitlist, and takes them off of the waitlist.</i></small>
         <br>
-        <button onclick="sendConfirmationWaitlisted()">Send confirmation email to the waitlisted</button>
+        <button onclick="sendConfirmationWaitlisted()">Send confirmation email to the waitlisted</button>-->
+
+        <hr>
+        <h3>Perform Check-In</h3>
+        <small><i>Note, this marks an individual user as "checked in", in the database regardless of their status in the database</i></small>
+        <br>
+        <input id="individualEmail" type="text" placeholder="individual@mail.uc.edu">
+        <button onclick="checkIn()">Check In</button>
 
         <hr>
         <h3>Fetch registrants</h3>
@@ -79,8 +86,8 @@
                 {"data": 'email', title: 'Email'},
                 {"data": 'emailVerified', title: 'Verified'},
                 {"data": 'waitList', title: 'Waitlisted'},
-                {"data": 'receivedAttendanceConfirmationEmail', title: 'Sent Attendance Confirmation Email'},
                 {"data": 'attendanceConfirmed', title: 'Attending'},
+                {"data": 'checkedIn', title: 'Checked-In'},
               ]
             });
           });
@@ -100,6 +107,10 @@
 
       function sendConfirmationWaitlisted() {
         fetch(`/api/v1/registration/sendConfirmationToWaitlisted?key=${document.querySelector('#apiKey').value}`);
+      }
+
+      function checkIn() {
+        fetch(`/api/v1/registration/checkIn?key=${document.querySelector('#apiKey').value}&userEmail=${document.querySelector('#individualEmail').value}`);
       }
     </script>
 
