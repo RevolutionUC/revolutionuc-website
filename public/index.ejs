@@ -1,70 +1,22 @@
 <% if(partial == false) { %> <% include ./header %> <% } %>
 
-    <% title= 'RevolutionUC'; %>
-    <% subtitle = '<img src="imgs/icons/today.svg"> April 8th & 9th</img>' ; %>
-    <% secondary_subtitle = '<img src="imgs/icons/location.svg"> Cincinnati, OH</img>' ; %>
-    <% background= 'home-masthead.jpg'; %>
-    <% include ./masthead %>
-
     <div view class="animatable" id="view-home">
       <div class="container">
 
-        <div class="buildlearngrow-card" router-link>
-          <a href="/about">
-            <div class="buildlearngrow-card__text">
-              <h2>Build. Learn. Grow.</h2>
-              <p>RevolutionUC is open to all college and high school students</p>
-            </div>
-          </a>
+        <iframe style="max-width:700px;width:100%;height:360px;display:block;margin:0 auto;" src="https://w2.countingdownto.com/1779372" frameborder="0"></iframe>
+        <p style="text-align:center">
+          <a href="https://slack.revolutionuc.com">Join RevolutionUC on Slack</a>
+        </p>
+        <p style="text-align:center">
+          <a href="https://drive.google.com/file/d/0BwrUJBNACdVCMTdaZVB3OWdLa1k/view?usp=sharing">Check out our tech talk schedule</a>
+        </p>
+        <div style="width:400px;margin:20px auto">
+          <a class="twitter-timeline" data-width="400" data-height="600" href="https://twitter.com/Revolution_UC"></a>
         </div>
 
-        <div class="socials devpost">
-          <h2>See our past hacks:</h2>
-          <ul class="list-inline">
-            <li>
-              <a href="https://revolutionuc1.devpost.com/submissions" target="_blank">
-                <img class="devpost" src="/imgs/revuc-fall-2016.png">
-              </a>
-            </li>
-            <li class="columns-3">
-              <a href="https://revolutionuc-iv.devpost.com/submissions" target="_blank">
-                <img class="devpost" src="/imgs/revuc-spring-2016.png">
-              </a>
-            </li>
-            <li class="columns-3">
-              <a href="https://revuc-iii.devpost.com/submissions" target="_blank">
-                <img class="devpost" src="/imgs/revuc-spring-2015.png">
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="socials social-media">
-          <ul class="list-inline">
-            <li>
-              <a href="https://twitter.com/Revolution_UC" title="RevolutionUC on Twitter" target="_blank">
-                <img src="/imgs/icons/twitter.svg" alt="Twitter">
-              </a>
-            </li>
-            <li class="columns-3">
-              <a href="https://facebook.com/RevolutionUC" title"RevolutionUC on Facebook" target="_blank">
-                <img src="/imgs/icons/facebook.svg" alt="Facebook">
-              </a>
-            </li>
-            <li class="columns-3">
-              <a href="https://github.com/RevolutionUC" title="RevolutionUC on GitHub" target="_blank">
-                <img src="/imgs/icons/github.svg" alt="GitHub">
-              </a>
-            </li>
-            <li class="columns-3">
-              <a href="mailto:info@revolutionuc.com" title="Email us at info@revolutionuc.com" target="_blank">
-                <img src="/imgs/icons/email.svg" alt="Email">
-              </a>
-            </li>
-          </ul>
-        </div>
+        <% include ./devpost %>
+        <% include ./socials %>
       </div>
     </div>
-
 
 <% if(partial == false) { %> <% include ./footer %> <% } %>
