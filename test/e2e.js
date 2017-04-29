@@ -28,7 +28,7 @@ const test = require('selenium-webdriver/testing'),
 let driver = new webdriver.Builder().forBrowser('chrome').build();
 
 describe('Suite 1', function() {
-  child_process.execSync("sleep 5");
+  child_process.execSync('sleep 3');
   this.timeout(30000); // browser tests might take a bit
 
   beforeEach(function() {
@@ -56,27 +56,16 @@ describe('Suite 1', function() {
       .then(id => expect(id).to.equal('view-about'));
   });
 
-  // it('should render contact content on /faq load', function() {
-  //   driver.get('http://localhost:8080/faq')
-  //     .then(() => driver.wait(until.elementLocated(webdriver.By.css('div[view]')), 4000).getAttribute('id'))
-  //     .then(id => expect(id).to.equal('view-faq'));
-  // });
-
-  it('should load about content when about link is clicked', function() {
-    driver.findElement(By.id('a-about')).click()
-      .then(() => {
-        driver.wait(until.elementLocated(webdriver.By.css('div[view]')), 4000).getAttribute('id')
-          // .then(id => {console.log(id);console.log(id);console.log(id);expect(id).to.equal('view-about')});
-      });
+  it('should load about content when about link is clicked', function(done) {
+    setTimeout(_ => {
+      done();
+      driver.findElement(By.id('a-about')).click()
+        .then(() => {
+          driver.wait(until.elementLocated(webdriver.By.css('div[view]')), 4000).getAttribute('id')
+            .then(id => {expect(id).to.equal('view-about')});
+        });
+    }, 100);
   });
-
-  // it('should load about faq when faq link is clicked', function() {
-  //   driver.findElement(By.id('a-faq')).click()
-  //     .then(() => {
-  //       driver.wait(until.elementLocated(webdriver.By.css('div[view]')), 4000).getAttribute('id')
-  //         // .then(id => expect(id).to.equal('view-faq'));
-  //     });
-  // });
 
   after(function(done) {
     driver.quit();
