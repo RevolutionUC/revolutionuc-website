@@ -6,7 +6,7 @@
 [![devDependency Status](https://david-dm.org/RevolutionUC/revolutionuc-website/dev-status.svg)](https://david-dm.org/revolutionuc/revolutionuc-website#info=devDependencies)
 [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
 
-Spring 2017 (and possibly future) RevolutionUC University hackathon website "framework".
+Spring 2017 (and possibly future) RevolutionUC University hackathon website "framework". See [v1.2.0](https://github.com/RevolutionUC/revolutionuc-website/tree/v1.2.0) for the Spring 2017 site.
 
 # Development
 

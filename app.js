@@ -8,8 +8,6 @@ const crypto = require('crypto');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const LEX = require('letsencrypt-express');
-const cookieParser = require('cookie-parser');
-const expressValidator = require('express-validator');
 
 const express = require('express');
 const app = express();
@@ -20,8 +18,6 @@ const app = express();
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(expressValidator([]));
-app.use(cookieParser());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './public'));
 
@@ -39,12 +35,6 @@ app.get('*', (request, response, next) => {
   // Move on down the line
   next();
 });
-
-/**
- * API setup
- */
-const apiV1 = require('./lib/controllers/api/v1');
-app.use('/api/v1', apiV1);
 
 /**
  * Support for partial view rendering. This handler matches requests like: `/`, `/path`, and `/path/`
