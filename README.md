@@ -1,7 +1,7 @@
 # revolutionuc-website
 
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
-[![build status](https://api.travis-ci.org/RevolutionUC/revolutionuc-website.svg?branch=master)](https://api.travis-ci.org/revolutionuc/revolutionuc-website.svg?branch=master)
+[![Build Status](https://travis-ci.org/RevolutionUC/revolutionuc-website.svg?branch=master)](https://travis-ci.org/RevolutionUC/revolutionuc-website)
 [![Dependency Status](https://david-dm.org/RevolutionUC/revolutionuc-website.svg)](https://david-dm.org/revolutionuc/revolutionuc-website)
 [![devDependency Status](https://david-dm.org/RevolutionUC/revolutionuc-website/dev-status.svg)](https://david-dm.org/revolutionuc/revolutionuc-website#info=devDependencies)
 [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
