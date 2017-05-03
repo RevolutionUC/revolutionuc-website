@@ -12,7 +12,27 @@ nav * {
 h1 {
   font-size: 70px;
 
+  &.heading--thanks {
+    position: relative;
+    top: 50%;
+    transform: translateY(-100%); // really dirty, fix this later
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &.heading--thanks {
+      top: auto !important;
+      bottom: 0;
+      transform: translateY(-60%); // really dirty, fix this later
+    }
+  }
+
   @media (max-width: $mobile-breakpoint) {
-    font-size: 50px;
+    font-size: 30px;
+
+    &.heading--thanks {
+      top: auto !important;
+      bottom: 0;
+      transform: translateY(-110%); // really dirty, fix this later
+    }
   }
 }
