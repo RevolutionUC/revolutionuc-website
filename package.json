@@ -12,7 +12,7 @@
     "webpack-no-watch": "cd ./lib/client && webpack && cd ../.."
   },
   "dependencies": {
-    "body-parser": "^1.15.2",
+    "body-parser": "^1.17.2",
     "bourbon-neat": "^1.8.0",
     "debug": "^2.3.2",
     "dotenv": "^2.0.0",
