@@ -1,0 +1,23 @@
+<% if(partial == false) { %> <% include ../header %> <% } %>
+
+    <% title= 'Verify Email'; %>
+    <% subtitle = ''; %>
+    <% secondary_subtitle = ''; %>
+
+    <div view class="animatable" id="view-check-email">
+      <div class="container">
+
+        <% if (confirmAttendance) { %>
+          <h1>Attendance Confirmed!</h1>
+          <p>
+            Thank you for confirming your attendance with us! If something comes up and you are no longer able to attend the event
+            please be sure to email us at <a href="mailto:info@revolutionuc.com">info@revolutionuc.com</a>.
+          </p>
+        <% } else { %>
+          <h1>Sorry to see you go!</h1>
+          <p>Sorry you couldn't make it, hope to see you next time! If you made this decision in error please email us at <a href="mailto:info@revolutionuc.com">info@revolutionuc.com</a></p>
+        <% } %>
+      </div>
+    </div>
+
+<% if(partial == false) { %> <% include ../footer %> <% } %>
