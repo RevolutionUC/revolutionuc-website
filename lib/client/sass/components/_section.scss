@@ -15,6 +15,10 @@ section {
       transform: translateX(20px);
       transition: transform 0.3s cubic-bezier(0, 0, .3, 1),
                   opacity 0.3s cubic-bezier(0, 0, .3, 1);
+
+      &#view-home {
+        background-color: #fff; // special background color to display the logos against
+      }
     }
 
     &.visible {

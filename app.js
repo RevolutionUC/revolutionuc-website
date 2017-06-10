@@ -60,7 +60,7 @@ app.get(/\/([^.]*$)/, (request, response) => {
   const data = {partial: 'partial' in request.query, confirmAttendance: request.query.confirm == 'YES'};
   const options = {};
   response.render(path.join(request.requestedPage), data, function(err, document) {
-    if(err){
+    if (err) {
       response.redirect('/404');
     } else {
       response.set({
