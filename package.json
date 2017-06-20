@@ -45,6 +45,6 @@
     "ps-tree": "^1.1.0",
     "sass-loader": "^4.1.1",
     "selenium-assistant": "^5.0.1",
-    "webpack": "^2.1.0-beta.27"
+    "webpack": "^3.0.0"
   }
 }
