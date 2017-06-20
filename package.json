@@ -43,7 +43,7 @@
     "mocha": "^3.2.0",
     "node-sass": "^4.2.0",
     "ps-tree": "^1.1.0",
-    "sass-loader": "^4.1.1",
+    "sass-loader": "^5.0.1",
     "selenium-assistant": "^5.0.1",
     "webpack": "^3.0.0"
   }
