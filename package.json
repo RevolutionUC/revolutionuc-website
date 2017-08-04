@@ -25,7 +25,7 @@
     "mongoose": "^4.7.7",
     "morgan": "^1.7.0",
     "multer": "^1.2.1",
-    "nodep-date-input-polyfill": "^4.2.0",
+    "nodep-date-input-polyfill": "^5.1.0",
     "revolutionuc-emails": "github:revolutionuc/revolutionuc-emails#v1.1.9",
     "whatwg-fetch": "^2.0.2",
     "web-push": "^3.0.0"
