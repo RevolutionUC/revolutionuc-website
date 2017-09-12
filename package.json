@@ -28,7 +28,7 @@
     "nodep-date-input-polyfill": "^4.2.0",
     "revolutionuc-emails": "github:revolutionuc/revolutionuc-emails#v1.1.9",
     "whatwg-fetch": "^2.0.2",
-    "web-push": "^3.0.0"
+    "web-push": "3.2.2"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
