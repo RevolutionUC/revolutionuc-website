@@ -20,7 +20,7 @@
     "ejs": "^2.5.5",
     "express": "^4.14.0",
     "express-validator": "^3.1.2",
-    "http2": "^3.3.2",
+    "http2": "^3.3.7",
     "letsencrypt-express": "^2.0.5",
     "mongoose": "^4.7.7",
     "morgan": "^1.7.0",
