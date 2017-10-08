@@ -1,18 +1,28 @@
 <% if(partial == false) { %> <% include ./header %> <% } %>
 
     <% title= 'RevolutionUC'; %>
-    <% subtitle = '<img src="imgs/ic_today_white_18px.svg"> April 8th & 9th</img>' ; %>
+    <% subtitle = '<img src="imgs/ic_today_white_18px.svg"> March 3rd & 4th</img>' ; %>
     <% secondary_subtitle = '<img src="imgs/ic_location_on_white_18px.svg"> Cincinnati, OH</img>' ; %>
     <% background= 'home-masthead.jpg'; %>
     <% include ./masthead %>
 
     <div view class="animatable" id="view-home">
-      <h2>RevolutionUC</h2>
-      <h3>Registration is opening soon. Sign up to be notified when it does.</h3>
-      <a id="registration-notify" href="http://eepurl.com/cw1Iez">
-          <img src="/imgs/notify.svg" style="vertical-align: middle;" alt="notift icon">
-          <span style="vertical-align: text-top;margin-left:3px;">Notify Me</span>
-      </a>
+      <div class="container">
+        <p>
+          Interested? Get notified when registration opens!
+          <a class="button button--registration-notify" href="http://eepurl.com/cw1Iez">
+            <img src="/imgs/icons/notify.svg" alt="notifty icon">
+            <span>Notify Me</span>
+          </a>
+        </p>
+
+        <a class="buildlearngrow-card" href="/about">
+          <div class="buildlearngrow-card__text">
+            <h2>Build. Learn. Grow.</h2>
+          </div>
+        </a>
+        <% include socials.ejs %>
+      </div>
     </div>
 
 <% if(partial == false) { %> <% include ./footer %> <% } %>

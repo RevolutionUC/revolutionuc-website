@@ -3,12 +3,12 @@
   "short_name": "RevUC",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#67cbec",
-  "theme_color": "#67cbec",
+  "background_color": "#3552a7",
+  "theme_color": "#3552a7",
   "description": "Student Hackathon held at the University of Cincinnati - April 8th and 9th, 2017",
   "icons": [{
-    "src": "/imgs/revuc@48.png",
-    "sizes": "48x48",
+    "src": "/imgs/revuc@32.png",
+    "sizes": "32x32",
     "type": "image/png"
   },
   {
@@ -27,8 +27,8 @@
     "type": "image/png"
   },
   {
-    "src": "/imgs/revuc@168.png",
-    "sizes": "168x168",
+    "src": "/imgs/revuc@152.png",
+    "sizes": "152x152",
     "type": "image/png"
   },
   {

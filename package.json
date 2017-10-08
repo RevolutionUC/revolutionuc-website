@@ -5,7 +5,7 @@
   "author": "Dom Farolino <domfarolino@gmail.com> (https://domfarolino.com)",
   "scripts": {
     "start": "npm run webpack-no-watch && node ./app",
-    "dev": "concurrently \"npm run webpack\" \"npm run serve-dev\" --kill-others",
+    "dev": "concurrently \"npm run webpack\" \"npm run serve-dev\"",
     "serve-dev": "export PORT=8080 HTTPS_CHALLENGE_PORT=8081; node ./app",
     "test": "mocha test/e2e.js;",
     "webpack": "cd ./lib/client && webpack --watch && cd ../..",
