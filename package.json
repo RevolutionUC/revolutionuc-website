@@ -41,7 +41,7 @@
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "html-loader": "^0.4.4",
     "mocha": "^3.2.0",
-    "node-sass": "^4.2.0",
+    "node-sass": "^4.6.0",
     "ps-tree": "^1.1.0",
     "sass-loader": "^5.0.1",
     "selenium-assistant": "^5.0.1",
