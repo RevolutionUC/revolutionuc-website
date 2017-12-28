@@ -1,19 +1,15 @@
 {
   "name": "revolutionuc-website",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "private": true,
-  "author": "Dom Farolino <domfarolino@gmail.com> (https://domfarolino.com)",
+  "author": "Dominic Farolino <domfarolino@gmail.com> (https://domfarolino.com)",
   "scripts": {
-    "start": "npm run webpack-no-watch && node ./app",
-    "dev": "concurrently \"npm run webpack\" \"npm run serve-dev\" --kill-others",
-    "serve-dev": "export PORT=8080 HTTPS_CHALLENGE_PORT=8081; node ./app",
-    "test": "mocha test/e2e.js;",
-    "webpack": "cd ./lib/client && webpack --watch && cd ../..",
-    "webpack-no-watch": "cd ./lib/client && webpack && cd ../.."
+    "start": "node ./app",
+    "dev": "export PORT=8080 HTTPS_CHALLENGE_PORT=8081; node ./app",
+    "test": "echo \"Tests are not available yet\""
   },
   "dependencies": {
     "body-parser": "^1.15.2",
-    "bourbon-neat": "^1.8.0",
     "cookie-parser": "^1.4.3",
     "debug": "^2.3.2",
     "dotenv": "^2.0.0",
@@ -26,25 +22,11 @@
     "morgan": "^1.7.0",
     "multer": "^1.2.1",
     "nodep-date-input-polyfill": "^4.2.0",
-    "revolutionuc-emails": "github:revolutionuc/revolutionuc-emails#v1.1.9",
-    "whatwg-fetch": "^2.0.2",
-    "web-push": "^3.0.0"
+    "revolutionuc-emails": "github:revolutionuc/revolutionuc-emails#v1.1.9"
   },
   "devDependencies": {
-    "babel-core": "^6.18.2",
-    "babel-loader": "^7.0.0",
-    "babel-preset-es2015": "^6.18.0",
     "chai": "^3.5.0",
     "chai-as-promised": "^7.0.0",
-    "concurrently": "^3.1.0",
-    "css-loader": "^0.28.0",
-    "extract-text-webpack-plugin": "^2.0.0-beta.4",
-    "html-loader": "^0.4.4",
-    "mocha": "^3.2.0",
-    "node-sass": "^4.2.0",
-    "ps-tree": "^1.1.0",
-    "sass-loader": "^5.0.1",
-    "selenium-assistant": "^5.0.1",
-    "webpack": "^3.0.0"
+    "mocha": "^3.2.0"
   }
 }
