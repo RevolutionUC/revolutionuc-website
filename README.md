@@ -6,7 +6,9 @@
 [![devDependency Status](https://david-dm.org/RevolutionUC/revolutionuc-website/dev-status.svg)](https://david-dm.org/revolutionuc/revolutionuc-website#info=devDependencies)
 [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
 
-Spring 2017 (and possibly future) RevolutionUC University hackathon website "framework".
+Spring 2018 (and possibly future) RevolutionUC University hackathon backend. Written in Node.js.
+
+For the front end repository, visit [RevolutionUC/revolutionuc-frontend](https://github.com/RevolutionUC/revolutionuc-frontend).
 
 # Development
 
@@ -31,20 +33,6 @@ If you have push access to the DO droplet, you can deploy the site by running:
 git remote add dokku dokku@revolutionuc.com:revolutionuc.com
 git push dokku master # this deploys the app
 ```
-
-# Contributing
-
-> Better description on how the code is structured coming soon... (discuss .env file)
-
-If you're using VSCode, by default it will not recognize files with the `.ejs` extension. Place the following code in `File -> Preferences -> User Settings` to overwrite the default settings
-```js
-{
-    // Configure file-language associations (e.g. "*.extension": "html"). These have precedence over the default associations of the languages installed.
-    "files.associations": {"*.ejs": "html"}
-}
-```
-
-Just about all contributions (with the exception of hot-fixes and other small things) should have an associated branch and pull request, and if the contribution is substantial please open an issue so we can discuss the best way to go about something before a bunch of code is written.
 
 ### Tests
 
