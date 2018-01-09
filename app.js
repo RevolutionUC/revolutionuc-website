@@ -22,8 +22,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator([]));
 app.use(cookieParser());
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, './public'));
 
 /**
  * Custom handler for all cache control
@@ -43,44 +41,16 @@ app.get('*', (request, response, next) => {
 /**
  * API setup
  */
-const apiV1 = require('./lib/controllers/api/v1');
-app.use('/api/v1', apiV1);
+const apiV1 = require('./lib/api');
+app.use('/api', apiV1);
 
-/**
- * Support for partial view rendering. This handler matches requests like: `/`, `/path`, and `/path/`
- * See regex in action: https://regex101.com/r/ciRbkx/4
- * We render the proper view partial giving it a boolean in the data object related to whether the
- * ?partial query parameter exists in the request. View partials (in ./public) will load in the header
- * and footer partials if the ?partial query parameter does not exist. If the ?partial parameter exists
- * the view partial will not pull in the header and footer, as it is just the main partial content we want
- * and not an entire user-ready page.
- */
-app.get(/\/([^.]*$)/, (request, response) => {
-  request.requestedPage = request.params[0] || ''; // should be something like `` or `path`
-  const data = {partial: 'partial' in request.query, confirmAttendance: request.query.confirm == 'YES'};
-  const options = {};
-  response.render(path.join(request.requestedPage), data, function(err, document) {
-    if (err) {
-      response.redirect('/404');
-    } else {
-      response.set({
-        'ETag': crypto.createHash('md5').update(document).digest('hex')
-      });
-      response.send(document);
-    }
-  });
+app.get('/', (request, response) => {
+  response.redirect('/api');
 });
 
 app.get('/404', (request, response) => {
-  response.render(path.join(request.requestedPage), data, function(err, document) {
-    response.status(404).send(document);
-  });
+  response.status(404).json({"error": "page not found"});
 });
-
-/**
- * Static
- */
-app.use('/', express.static(path.join(__dirname, 'public')));
 
 /**
  * Letsencrypt and other stuff below
