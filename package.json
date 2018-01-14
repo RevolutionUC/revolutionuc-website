@@ -20,7 +20,7 @@
     "mongoose": "^4.7.7",
     "morgan": "^1.7.0",
     "multer": "^1.2.1",
-    "revolutionuc-emails": "github:revolutionuc/revolutionuc-emails#v1.1.9"
+    "revolutionuc-emails": "github:revolutionuc/revolutionuc-emails#v2.0.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
