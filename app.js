@@ -7,7 +7,7 @@ const path = require('path');
 const crypto = require('crypto');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-const LEX = require('letsencrypt-express');
+//const LEX = require('letsencrypt-express');
 const cookieParser = require('cookie-parser');
 const expressValidator = require('express-validator');
 
@@ -42,11 +42,7 @@ app.get('*', (request, response, next) => {
  * API setup
  */
 const apiV1 = require('./lib/api');
-app.use('/api', apiV1);
-
-app.get('/', (request, response) => {
-  response.redirect('/api');
-});
+app.use('/', apiV1);
 
 app.get('/404', (request, response) => {
   response.status(404).json({"error": "page not found"});
@@ -55,7 +51,7 @@ app.get('/404', (request, response) => {
 /**
  * Letsencrypt and other stuff below
  */
-const lex = LEX.create({
+/*const lex = LEX.create({
   server: 'staging',
   //configDir: require('os').homedir() + '/letsencrypt/etc',
   configDir: '/etc/letsencrypt',
@@ -83,14 +79,23 @@ function approveDomains(opts, certs, cb) {
 }
 
 lex.onRequest = app;
+*/
 
+require('http').createServer(app).listen(process.env.PORT, function() {
+  console.log('Server created!');
+});
+
+/*
 require('http').createServer(lex.middleware(app)).listen(process.env.PORT, function () {
   console.log("Listening for ACME http-01 challenges on", this.address());
 });
+*/
 
+/*
 require('https').createServer(lex.httpsOptions, lex.middleware(app)).listen(process.env.HTTPS_CHALLENGE_PORT, function () {
   console.log("Listening for ACME tls-sni-01 challenges and serve app on", this.address());
 });
+*/
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
