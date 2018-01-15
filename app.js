@@ -24,25 +24,10 @@ app.use(expressValidator([]));
 app.use(cookieParser());
 
 /**
- * Custom handler for all cache control
- */
-app.get('*', (request, response, next) => {
-  response.set({
-    'Cache-Control': 'no-cache'
-  });
-
-  // Remove bs headers
-  response.removeHeader('X-Powered-By');
-
-  // Move on down the line
-  next();
-});
-
-/**
  * API setup
  */
-const apiV1 = require('./lib/api');
-app.use('/', apiV1);
+const api = require('./lib/api');
+app.use('/', api);
 
 app.get('/404', (request, response) => {
   response.status(404).json({"error": "page not found"});
